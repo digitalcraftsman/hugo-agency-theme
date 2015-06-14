@@ -1,37 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Agency - Start Bootstrap Theme</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="{{ .Site.BaseURL }}css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="{{ .Site.BaseURL }}css/agency.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="{{ .Site.BaseURL }}font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css'>" link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    {{ partial "head.html" . }}
 </head>
 
 <body id="page-top" class="index">
-
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -45,7 +18,6 @@
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -73,7 +45,6 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-
     <!-- Header -->
     <header>
         <div class="container">
@@ -84,7 +55,6 @@
             </div>
         </div>
     </header>
-
     <!-- Services Section -->
     <section id="services">
         <div class="container">
@@ -122,7 +92,6 @@
             </div>
         </div>
     </section>
-
     <!-- Portfolio Grid Section -->
     <section id="portfolio" class="bg-light-gray">
         <div class="container">
@@ -220,7 +189,6 @@
             </div>
         </div>
     </section>
-
     <!-- About Section -->
     <section id="about">
         <div class="container">
@@ -301,7 +269,6 @@
             </div>
         </div>
     </section>
-
     <!-- Team Section -->
     <section id="team" class="bg-light-gray">
         <div class="container">
@@ -365,7 +332,6 @@
             </div>
         </div>
     </section>
-
     <!-- Clients Aside -->
     <aside class="clients">
         <div class="container">
@@ -393,7 +359,6 @@
             </div>
         </div>
     </aside>
-
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
@@ -438,7 +403,6 @@
             </div>
         </div>
     </section>
-
     <footer>
         <div class="container">
             <div class="row">
@@ -466,10 +430,8 @@
             </div>
         </div>
     </footer>
-
     <!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->
-
     <!-- Portfolio Modal 1 -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -502,7 +464,6 @@
             </div>
         </div>
     </div>
-
     <!-- Portfolio Modal 2 -->
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -528,7 +489,6 @@
             </div>
         </div>
     </div>
-
     <!-- Portfolio Modal 3 -->
     <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -555,7 +515,6 @@
             </div>
         </div>
     </div>
-
     <!-- Portfolio Modal 4 -->
     <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -582,7 +541,6 @@
             </div>
         </div>
     </div>
-
     <!-- Portfolio Modal 5 -->
     <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -609,7 +567,6 @@
             </div>
         </div>
     </div>
-
     <!-- Portfolio Modal 6 -->
     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -636,25 +593,19 @@
             </div>
         </div>
     </div>
-
     <!-- jQuery -->
     <script src="{{ .Site.BaseURL }}js/jquery.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="{{ .Site.BaseURL }}js/bootstrap.min.js"></script>
-
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="{{ .Site.BaseURL }}js/classie.js"></script>
     <script src="{{ .Site.BaseURL }}js/cbpAnimatedHeader.js"></script>
-
     <!-- Contact Form JavaScript -->
     <script src="{{ .Site.BaseURL }}js/jqBootstrapValidation.js"></script>
     <script src="{{ .Site.BaseURL }}js/contact_me.js"></script>
-
     <!-- Custom Theme JavaScript -->
     <script src="{{ .Site.BaseURL }}js/agency.js"></script>
-
 </body>
 
 </html>
