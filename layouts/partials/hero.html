@@ -1,0 +1,11 @@
+{{ "<!-- Hero -->" | safeHTML }}
+<header>
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-lead-in">{{ with .Site.Params.hero.title }}{{ . }}{{ end }}</div>
+            <div class="intro-heading">{{ with .Site.Params.hero.subtitle }}{{ . }}{{ end }}</div>
+            <a href="#services" class="page-scroll btn btn-xl">{{ with .Site.Params.hero.buttonText }}{{ . }}{{ end }}</a>
+        </div>
+    </div>
+</header>
+{{ "<!-- Services Section -->" | safeHTML }}
