@@ -1,0 +1,31 @@
+{{ "<!-- Portfolio Modals -->" | safeHTML }}
+{{ range .Site.Data.projects }}
+<div class="portfolio-modal modal fade" id="portfolioModal{{ .modalID }}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>{{ .title }}</h2>
+                        <p class="item-intro text-muted">{{ .subtitle | markdownify }}</p>
+                        <img class="img-responsive img-centered" src="img/portfolio/{{ .img }}" alt="">
+                        <p>{{ .description | markdownify }}</p>
+                        <ul class="list-inline">
+                            <li>{{ with $.Site.Params.portfolio.modal.date }}{{.}}{{ end }}: {{ .date }}</li>
+                            <li>{{ with $.Site.Params.portfolio.modal.client }}{{.}}{{ end }}: <a href="{{ .clientLink }}">{{ .client }}</a></li>
+                            <li>{{ with $.Site.Params.portfolio.modal.category }}{{.}}{{ end }}: {{ .category }}</li>
+                        </ul>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> {{ with $.Site.Params.portfolio.modal.buttonText }}{{.}}{{ end }}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
