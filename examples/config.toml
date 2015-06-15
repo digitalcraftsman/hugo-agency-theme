@@ -1,0 +1,230 @@
+# Site settings
+baseurl = "http://replace-this-with-your-hugo-site.com/"
+languageCode = "en-us"
+title = "Hugo Agency Theme"
+theme = "hugo-agency-theme"
+
+
+[params]
+
+	# You can use Markdown syntax for urls [text](//url.to/source) for
+	# most longer texts.
+	#
+	# All icons using Fontawesome's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
+	# for more icons. The icons are represented by their corresponding
+	# CSS class.
+
+	# To provide some metadata for search engines feel free to add a few
+    # information about you and your website.
+	name = "Your name"
+	description = "Your description"
+
+	# Since this template is static, the contact form uses www.formspree.io as a
+	# proxy. The form makes a POST request to their servers to send the actual
+	# email. Visitors can send up to a 1000 email each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+	email = "your@email.com"
+
+
+	# Navigation
+	[params.navigation]
+		brand = "The Agency"
+		services = "Services"
+		portfolio = "Portfolio"
+		about = "About"
+		team = "Team"
+		contact = "Contact"
+
+
+	# Hero section
+	[params.hero]
+		# To change the background image of the hero, replace 'header-bg.jpg' in
+		# the 'static/img' folder.
+		title = "Welcome To Our Studio!"
+		subtitle = "It's nice to meet you"
+		buttonText = "Tell me more"
+
+
+	# Services section
+	[params.services]
+		title = "Services"
+		subtitle = "Lorem ipsum dolor sit amet consectetur."
+
+		[[params.services.list]]
+			icon = "fa-shopping-cart"
+			title = "E-Commerce"
+			description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+
+		[[params.services.list]]
+			icon = "fa-laptop"
+			title = "Responsive Design"
+			description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+
+		[[params.services.list]]
+			icon = "fa-lock"
+			title = "Web"
+			description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+
+
+	# Portfolio section
+	[params.portfolio]
+		# All projects defined in their own files. You can find example projects
+		# at 'examples/projects'. Copy the 'projects' folder into the 'data' directory
+		# at the root of this Hugo site.
+		# For more informtion take a look at the README.
+		title = "Portfolio"
+		subtitle = "Lorem ipsum dolor sit amet consectetur."
+
+		[params.portfolio.modal]
+            client = "Client"
+            date = "Date"
+            category = "Category"
+            buttonText = "Close project"
+
+
+    # About section
+	[params.about]
+		title = "About"
+		subtitle = "Lorem ipsum dolor sit amet consectetur."
+		endpoint = "Be part<br>of our<br>story!"
+
+		# The events will be listed from the top to the bottom
+		# All images are stored under 'static/img/about'.
+		# Replace them with your own.
+		[[params.about.events]]
+			img = "1.jpg"
+			date = "2009-2011"
+			title = "Our Humble Beginnings"
+			description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+
+		[[params.about.events]]
+			img = "2.jpg"
+			date = "March 2011"
+			title = "An Agency is Born"
+			description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+
+		[[params.about.events]]
+			img = "3.jpg"
+			date = "December 2012"
+			title = "Our Humble Beginnings"
+			description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+
+		[[params.about.events]]
+			img = "4.jpg"
+			date = "July 2014"
+			title = "Phase Two Expansion"
+			description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+
+
+	# Team section
+	[params.team]
+		title = "Our amazing team"
+		subtitle = "Lorem ipsum dolor sit amet consectetur."
+		description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde."
+
+		# All team member pictures are stored under 'static/img/team'.
+		# Replace them with your own.
+		[[params.team.members]]
+			img = "1.jpg"
+			name = "Kay Garland"
+			position = "Lead Designer"
+			social = [
+				["fa-twitter", "#"],
+				["fa-facebook", "#"],
+				["fa-linkedin", "#"]
+			]
+
+		[[params.team.members]]
+			img = "2.jpg"
+			name = "Larry Parker"
+			position = "Lead Marketer"
+			social = [
+				["fa-twitter", "#"],
+				["fa-facebook", "#"],
+				["fa-linkedin", "#"]
+			]
+
+		[[params.team.members]]
+			img = "3.jpg"
+			name = "Diana Pertersen"
+			position = "Lead Developer"
+			social = [
+				["fa-twitter", "#"],
+				["fa-facebook", "#"],
+				["fa-linkedin", "#"]
+			]
+
+	# Client section
+	# All the clients' logos are stored under 'static/img/logos'.
+	# Replace them with your clients's logos.
+	[[params.clients]]
+		logo = "envato.jpg"
+		link = "#"
+
+	[[params.clients]]
+		logo = "designmodo.jpg"
+		link = "#"
+
+	[[params.clients]]
+		logo = "themeforest.jpg"
+		link = "#"
+
+	[[params.clients]]
+		logo = "creative-market.jpg"
+		link = "#"
+
+
+	# Contact section
+	[params.contact]
+		title = "Contact us"
+		subtitle  = "Lorem ipsum dolor sit amet consectetur."
+		buttonText = "Send message"
+
+		# 'warning' defines error messages for invalid inputs
+		[params.contact.form.name]
+			text = "Your Name *"
+			warning = "Please enter your name."
+
+		[params.contact.form.email]
+			text = "Your Email *"
+			warning = "Please enter your email address."
+
+		[params.contact.form.phone]
+			text = "Your Phone *"
+			warning = "Please enter your phone number."
+
+		[params.contact.form.message]
+			text = "Your Message *"
+			warning = "Please enter a message."
+
+
+	# Footer section
+	[params.footer]
+		copyright = "Published under the Apache License 2.0."
+
+		[[params.footer.social]]
+			icon = "fa-twitter"
+			link = "#"
+
+		[[params.footer.social]]
+			icon = "fa-facebook"
+			link = "#"
+
+		[[params.footer.social]]
+			icon = "fa-linkedin"
+			link = "#"
+
+		[[params.footer.quicklinks]]
+			text = "Privacy Policy"
+			link = "#"
+
+		[[params.footer.quicklinks]]
+			text = "Terms of Use"
+			link = "#"
