@@ -41,7 +41,7 @@ After installing the Agency Theme successfully it requires a just a few more ste
 
 ### The config file
 
-Take a look inside the [`examples`](//github.com/digitalcraftsman/hugo-agency-theme/tree/master/examples) folder of this theme. You'll find a file called [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/examples/config.toml). To use it, copy the [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/examples/config.toml) in the root folder of your Hugo site. Feel free to change the strings in this theme.
+Take a look inside the [`exampleSite`](//github.com/digitalcraftsman/hugo-agency-theme/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/exampleSite/config.toml). To use it, copy the [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/exampleSite/config.toml) in the root folder of your Hugo site. Feel free to change the strings in this theme.
 
 
 ### Change the hero background
@@ -51,7 +51,7 @@ The hero acts as an eye-catcher for your site. So consider to give him a nice ba
 
 ### Present your skills
 
-This section should show your capabilities and skills. You can change the services at `[params.services.list]` in the [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/examples/config.toml).
+This section should show your capabilities and skills. You can change the services at `[params.services.list]` in the [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/exampleSite/config.toml).
 
 All icons are part of Fontawesome's icon font. Look at the website of [Fontawesome](//fortawesome.github.io/Font-Awesome/icons/) for more icons. The icons are represented by their corresponding CSS class of Fontawesome. A skill is defined like this example:
 
@@ -65,7 +65,7 @@ All icons are part of Fontawesome's icon font. Look at the website of [Fontaweso
 
 ### Create your portfolio
 
-Beside the [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/examples/config.toml), there is another subfolder called [`projects`](//github.com/digitalcraftsman/hugo-agency-theme/tree/master/examples/projects) which hosts the files that will appear as your projects in the portfolio section. Such a project file might look like [this one](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/examples/projects/2014-07-05-project-1.yaml) written in YAML:
+Beside the [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/exampleSite/config.toml), there is another subfolder called [`projects`](//github.com/digitalcraftsman/hugo-agency-theme/tree/master/exampleSite/projects) which hosts the files that will appear as your projects in the portfolio section. Such a project file might look like [this one](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/exampleSite/projects/2014-07-05-project-1.yaml) written in YAML:
 
 ```yaml
 modalID: 1
@@ -80,7 +80,7 @@ category: Graphic Design
 description: Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo! <br><br>**Want these icons in this portfolio item sample?** You can download 60 of them for free, courtesy of [RoundIcons.com](//getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc), or you can purchase the 1500 icon set [here](//getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc).
 ```
 
-Copy [`projects`](//github.com/digitalcraftsman/hugo-agency-theme/tree/master/examples/projects) inside the `data` folder in the root directory of your site. Let's make some changes.
+Copy [`projects`](//github.com/digitalcraftsman/hugo-agency-theme/tree/master/exampleSite/projects) inside the `data` folder in the root directory of your site. Let's make some changes.
 
 Pay attention to the `modalID`. It must be a unique integer and be incremented with each new project you want to add to the portfolio. Otherwise, the corresponding modal can't be rendered.
 
@@ -91,7 +91,7 @@ To give your projects an image, save those under [`static/img/portfolio`](github
 
 ### Show what happened
 
-This theme features a timeline for important events in your company or your career too. You can add a new event by copying the following snippet to the `[params.about]` section in the [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/examples/config.toml).
+This theme features a timeline for important events in your company or your career too. You can add a new event by copying the following snippet to the `[params.about]` section in the [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/exampleSite/config.toml).
 
 ```toml
 [[params.about.events]]
@@ -106,7 +106,7 @@ The image set under `img` needs to be stored at [`static/img/about`](//github.co
 
 ### Introduce your team
 
-Let the visitors or potential clients know who you are. To add a team member paste the code below into the [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/examples/config.toml). The `img` field refers to the shown image. Paste those of you or your colleages into [`static/img/team`](//github.com/digitalcraftsman/hugo-agency-theme/tree/master/static/img/team) 
+Let the visitors or potential clients know who you are. To add a team member paste the code below into the [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/exampleSite/config.toml). The `img` field refers to the shown image. Paste those of you or your colleages into [`static/img/team`](//github.com/digitalcraftsman/hugo-agency-theme/tree/master/static/img/team) 
 
 ```toml
 [[params.team.members]]
@@ -125,7 +125,7 @@ As you can see there's an option to link individual social networks. The first i
 
 ### List your clients
 
-You can also show some of your clients. To do so, paste the client's logos into [`static/img/logos`](//github.com/digitalcraftsman/hugo-agency-theme/tree/master/static/img/logos) and add the example below to the [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/examples/config.toml).
+You can also show some of your clients. To do so, paste the client's logos into [`static/img/logos`](//github.com/digitalcraftsman/hugo-agency-theme/tree/master/static/img/logos) and add the example below to the [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/exampleSite/config.toml).
 
 ```toml
 [[params.clients]]
@@ -140,7 +140,7 @@ You can also show some of your clients. To do so, paste the client's logos into 
 
 Since this page will be static, you can use [formspree.io](//formspree.io/) as proxy to send the actual email. Each month, visitors can send you up to one thousand emails without incurring extra charges. Begin the setup by following the steps below:
 
-1. Enter your email address under 'email' in the [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/examples/config.toml)
+1. Enter your email address under 'email' in the [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/exampleSite/config.toml)
 2. Upload the generated site to your server
 3. Send a dummy email yourself to confirm your account
 4. Click the confirm link in the email from [formspree.io](//formspree.io/)
