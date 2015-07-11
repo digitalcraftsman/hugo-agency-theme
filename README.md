@@ -65,7 +65,7 @@ All icons are part of Fontawesome's icon font. Look at the website of [Fontaweso
 
 ### Create your portfolio
 
-Beside the [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/exampleSite/config.toml), there is another subfolder called [`projects`](//github.com/digitalcraftsman/hugo-agency-theme/tree/master/exampleSite/projects) which hosts the files that will appear as your projects in the portfolio section. Such a project file might look like [this one](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/exampleSite/projects/2014-07-05-project-1.yaml) written in YAML:
+Beside the [`config.toml`](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/exampleSite/config.toml), there is under `data` another subfolder called [`projects`](//github.com/digitalcraftsman/hugo-agency-theme/tree/master/exampleSite/data/projects) which hosts the files that will appear as your projects in the portfolio section. Such a project file might look like [this one](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/exampleSite/data/projects/2014-07-05-project-1.yaml) written in YAML:
 
 ```yaml
 modalID: 1
@@ -80,7 +80,7 @@ category: Graphic Design
 description: Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo! <br><br>**Want these icons in this portfolio item sample?** You can download 60 of them for free, courtesy of [RoundIcons.com](//getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc), or you can purchase the 1500 icon set [here](//getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc).
 ```
 
-Copy [`projects`](//github.com/digitalcraftsman/hugo-agency-theme/tree/master/exampleSite/projects) inside the `data` folder in the root directory of your site. Let's make some changes.
+Copy [`projects`](//github.com/digitalcraftsman/hugo-agency-theme/tree/master/exampleSite/data/projects) inside the `data` folder in the **root** directory of your site. Let's make some changes.
 
 Pay attention to the `modalID`. It must be a unique integer and be incremented with each new project you want to add to the portfolio. Otherwise, the corresponding modal can't be rendered.
 
