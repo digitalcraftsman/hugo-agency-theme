@@ -21,7 +21,7 @@ theme = "hugo-agency-theme"
 
 	# Since this template is static, the contact form uses www.formspree.io as a
 	# proxy. The form makes a POST request to their servers to send the actual
-	# email. Visitors can send up to a 1000 email each month for free.
+	# email. Visitors can send up to a 1000 emails each month for free.
     #
     # What you need to do for the setup?
     #
@@ -76,7 +76,7 @@ theme = "hugo-agency-theme"
 	# Portfolio section
 	[params.portfolio]
 		# All projects defined in their own files. You can find example projects
-		# at 'examples/projects'. Copy the 'projects' folder into the 'data' directory
+		# at 'exampleSite/data/projects'. Copy the 'projects' folder into the 'data' directory
 		# at the root of this Hugo site.
 		# For more informtion take a look at the README.
 		title = "Portfolio"
