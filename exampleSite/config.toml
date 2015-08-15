@@ -7,7 +7,7 @@ theme = "hugo-agency-theme"
 
 [params]
 
-	# You can use Markdown syntax for urls [text](//url.to/source) for
+	# You can use Markdown syntax for urls [text](//url.to/source) or
 	# most longer texts.
 	#
 	# All icons using Fontawesome's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
@@ -95,7 +95,7 @@ theme = "hugo-agency-theme"
 		subtitle = "Lorem ipsum dolor sit amet consectetur."
 		endpoint = "Be part<br>of our<br>story!"
 
-		# The events will be listed from the top to the bottom
+		# The events will be listed from the top to the bottom.
 		# All images are stored under 'static/img/about'.
 		# Replace them with your own.
 		[[params.about.events]]
@@ -129,8 +129,8 @@ theme = "hugo-agency-theme"
 		subtitle = "Lorem ipsum dolor sit amet consectetur."
 		description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde."
 
-		# All team member pictures are stored under 'static/img/team'.
-		# Replace them with your own.
+		# All team member's pictures are stored under 'static/img/team'.
+		# Replace them with your own too.
 		[[params.team.members]]
 			img = "1.jpg"
 			name = "Kay Garland"
