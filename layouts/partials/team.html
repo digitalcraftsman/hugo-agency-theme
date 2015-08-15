@@ -16,12 +16,13 @@
                     <p class="text-muted">{{ .position }}</p>
                     <ul class="list-inline social-buttons">
                         {{ range .social }}
-                        <li><a href="{{ index . 1 }}"><i class="fa {{ index . 0 }}"></i></a>
+                        <li><a href="{{ index . 1 }}"><i class="fa {{ index . 0 }}"></i></a></li>
                         {{ end }}
                     </ul>
                 </div>
             </div>
             {{ end }}
+        </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <p class="large text-muted">{{ with .Site.Params.team.description }}{{ . | markdownify }}{{ end }}</p>
