@@ -1,11 +1,11 @@
-name = "Hugo Agency Theme"
+name = "Agency"
 license = "Apache License 2.0"
 licenselink = "//github.com/digitalcraftsman/hugo-agency-theme/blob/master/LICENSE"
 description = "A one page portfolio for companies and freelancers."
 homepage = "//github.com/digitalcraftsman/hugo-agency-theme"
 tags = ["portfolio", "company", "contact form", "clients", "team"]
 features = ["portfolio with modals", "contact form", "timeline"]
-min_version = 0.13
+min_version = 0.14
 
 [author]
   name = "digitalcraftsman"
