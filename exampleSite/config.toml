@@ -2,7 +2,7 @@
 baseurl = "http://replace-this-with-your-hugo-site.com/"
 languageCode = "en-us"
 title = "Hugo Agency Theme"
-theme = "hugo-agency-theme"
+theme = "agency"
 
 
 [params]
