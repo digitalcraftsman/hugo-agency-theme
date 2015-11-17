@@ -7,8 +7,10 @@
                 <h3 class="section-subheading text-muted">{{ with .Site.Params.services.subtitle }}{{ . | markdownify }}{{ end }}</h3>
             </div>
         </div>
+
+        {{ range .Site.Params.services.row }}
         <div class="row text-center">
-            {{ range .Site.Params.services.list }}
+            {{ range .list }}
             <div class="col-md-4">
                 <span class="fa-stack fa-4x">
                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
@@ -19,5 +21,7 @@
             </div>
             {{ end }}
         </div>
+        {{ end }}
+
     </div>
 </section>

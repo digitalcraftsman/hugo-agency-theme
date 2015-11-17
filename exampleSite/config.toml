@@ -57,21 +57,22 @@ theme = "hugo-agency-theme"
 		title = "Services"
 		subtitle = "Lorem ipsum dolor sit amet consectetur."
 
-		[[params.services.list]]
-			icon = "fa-shopping-cart"
-			title = "E-Commerce"
-			description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+        [[params.services.row]]
 
-		[[params.services.list]]
-			icon = "fa-laptop"
-			title = "Responsive Design"
-			description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+            [[params.services.row.list]]
+                icon = "fa-shopping-cart"
+                title = "E-Commerce"
+                description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
 
-		[[params.services.list]]
-			icon = "fa-lock"
-			title = "Web"
-			description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+            [[params.services.row.list]]
+                icon = "fa-laptop"
+                title = "Responsive Design"
+                description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
 
+            [[params.services.row.list]]
+                icon = "fa-lock"
+                title = "Web"
+                description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
 
 	# Portfolio section
 	[params.portfolio]
