@@ -3,7 +3,8 @@ baseurl = "http://replace-this-with-your-hugo-site.com/"
 languageCode = "en-us"
 title = "Hugo Agency Theme"
 theme = "hugo-agency-theme"
-
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = ""
 
 [params]
 
