@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">{{ with .Site.Params.team.title }}{{ . }}{{ end }}</h2>
+                <h2 class="section-heading">{{ with .Site.Params.team.title }}{{ . | markdownify }}{{ end }}</h2>
                 <h3 class="section-subheading text-mutedwith ">{{ with .Site.Params.team.subtitle }}{{ . | markdownify }}{{ end }}</h3>
             </div>
         </div>
@@ -12,8 +12,8 @@
             <div class="col-sm-4">
                 <div class="team-member">
                     <img src="img/team/{{ .img }}" class="img-responsive img-circle" alt="">
-                    <h4>{{ .name }}</h4>
-                    <p class="text-muted">{{ .position }}</p>
+                    <h4>{{ .name | markdownify }}</h4>
+                    <p class="text-muted">{{ .position | markdownify }}</p>
                     <ul class="list-inline social-buttons">
                         {{ range .social }}
                         <li><a href="{{ index . 1 }}"><i class="fa {{ index . 0 }}"></i></a></li>

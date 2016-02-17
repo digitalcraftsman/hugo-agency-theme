@@ -2,9 +2,9 @@
 <header>
     <div class="container">
         <div class="intro-text">
-            <div class="intro-lead-in">{{ with .Site.Params.hero.title }}{{ . }}{{ end }}</div>
-            <div class="intro-heading">{{ with .Site.Params.hero.subtitle }}{{ . }}{{ end }}</div>
-            <a href="#services" class="page-scroll btn btn-xl">{{ with .Site.Params.hero.buttonText }}{{ . }}{{ end }}</a>
+            <div class="intro-lead-in">{{ with .Site.Params.hero.title }}{{ . | markdownify }}{{ end }}</div>
+            <div class="intro-heading">{{ with .Site.Params.hero.subtitle }}{{ . | markdownify }}{{ end }}</div>
+            <a href="#services" class="page-scroll btn btn-xl">{{ with .Site.Params.hero.buttonText }}{{ . | markdownify }}{{ end }}</a>
         </div>
     </div>
 </header>

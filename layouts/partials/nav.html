@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">{{ with .Site.Params.navigation.brand }}{{ . }}{{ end }}</a>
+            <a class="navbar-brand page-scroll" href="#page-top">{{ with .Site.Params.navigation.brand }}{{ . | markdownify }}{{ end }}</a>
         </div>
         {{ "<!-- Collect the nav links, forms, and other content for toggling -->" | safeHTML }}
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -18,19 +18,19 @@
                     <a href="#page-top"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#services">{{ with .Site.Params.navigation.services }}{{ . }}{{ end }}</a>
+                    <a class="page-scroll" href="#services">{{ with .Site.Params.navigation.services }}{{ . | markdownify }}{{ end }}</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#portfolio">{{ with .Site.Params.navigation.portfolio }}{{ . }}{{ end }}</a>
+                    <a class="page-scroll" href="#portfolio">{{ with .Site.Params.navigation.portfolio }}{{ . | markdownify }}{{ end }}</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#about">{{ with .Site.Params.navigation.about }}{{ . }}{{ end }}</a>
+                    <a class="page-scroll" href="#about">{{ with .Site.Params.navigation.about }}{{ . | markdownify }}{{ end }}</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#team">{{ with .Site.Params.navigation.team }}{{ . }}{{ end }}</a>
+                    <a class="page-scroll" href="#team">{{ with .Site.Params.navigation.team }}{{ . | markdownify }}{{ end }}</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">{{ with .Site.Params.navigation.contact }}{{ . }}{{ end }}</a>
+                    <a class="page-scroll" href="#contact">{{ with .Site.Params.navigation.contact }}{{ . | markdownify }}{{ end }}</a>
                 </li>
             </ul>
         </div>

@@ -12,16 +12,16 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="modal-body">
-                        <h2>{{ .title }}</h2>
+                        <h2>{{ .title  | markdownify }}</h2>
                         <p class="item-intro text-muted">{{ .subtitle | markdownify }}</p>
                         <img class="img-responsive img-centered" src="img/portfolio/{{ .img }}" alt="">
                         <p>{{ .description | markdownify }}</p>
                         <ul class="list-inline">
-                            <li>{{ with $.Site.Params.portfolio.modal.date }}{{.}}{{ end }}: {{ .date }}</li>
-                            <li>{{ with $.Site.Params.portfolio.modal.client }}{{.}}{{ end }}: <a href="{{ .clientLink }}">{{ .client }}</a></li>
-                            <li>{{ with $.Site.Params.portfolio.modal.category }}{{.}}{{ end }}: {{ .category }}</li>
+                            <li>{{ with $.Site.Params.portfolio.modal.date }}{{ . }}{{ end }}: {{ .date }}</li>
+                            <li>{{ with $.Site.Params.portfolio.modal.client }}{{ . | markdownify }}{{ end }}: <a href="{{ .clientLink }}">{{ .client }}</a></li>
+                            <li>{{ with $.Site.Params.portfolio.modal.category }}{{ . | markdownify }}{{ end }}: {{ .category  | markdownify }}</li>
                         </ul>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> {{ with $.Site.Params.portfolio.modal.buttonText }}{{.}}{{ end }}</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> {{ with $.Site.Params.portfolio.modal.buttonText }}{{ . | markdownify }}{{ end }}</button>
                     </div>
                 </div>
             </div>
