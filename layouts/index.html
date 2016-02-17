@@ -6,14 +6,39 @@
     <body id="page-top" class="index">
         {{ partial "nav.html" . }}
         {{ partial "hero.html" . }}
-        {{ partial "services.html" . }}
-        {{ partial "portfolio.html" . }}
-        {{ partial "about.html" . }}
-        {{ partial "team.html" . }}
-        {{ partial "clients.html" . }}
-        {{ partial "contact.html" . }}
-        {{ partial "footer.html" . }}
-        {{ partial "modals.html" . }}
+
+        {{ if .Site.Params.services.enable }}
+            {{ partial "services.html" . }}
+        {{ end }}
+
+        {{ if .Site.Params.portfolio.enable }}
+            {{ partial "portfolio.html" . }}
+        {{ end }}
+
+        {{ if .Site.Params.about.enable }}
+            {{ partial "about.html" . }}
+        {{ end }}
+
+        {{ if .Site.Params.team.enable }}
+            {{ partial "team.html" . }}
+        {{ end }}
+
+        {{ if .Site.Params.clients_list.enable }}
+            {{ partial "clients.html" . }}
+        {{ end }}
+
+        {{ if .Site.Params.contact.enable }}
+            {{ partial "contact.html" . }}
+        {{ end }}
+
+        {{ if .Site.Params.footer.enable }}
+            {{ partial "footer.html" . }}
+        {{ end }}
+
+        {{ if .Site.Params.portfolio.enable }}
+            {{ partial "modals.html" . }}
+        {{ end }}
+
         {{ partial "js.html" . }}
     </body>
 </html>

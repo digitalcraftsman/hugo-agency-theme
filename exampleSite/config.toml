@@ -55,6 +55,7 @@ googleAnalytics = ""
 
 	# Services section
 	[params.services]
+        enable = true
 		title = "Services"
 		subtitle = "Lorem ipsum dolor sit amet consectetur."
 
@@ -77,6 +78,7 @@ googleAnalytics = ""
 
 	# Portfolio section
 	[params.portfolio]
+        enable = true
 		# All projects defined in their own files. You can find example projects
 		# at 'exampleSite/data/projects'. Copy the 'projects' folder into the 'data' directory
 		# at the root of this Hugo site.
@@ -93,6 +95,7 @@ googleAnalytics = ""
 
     # About section
 	[params.about]
+        enable = true
 		title = "About"
 		subtitle = "Lorem ipsum dolor sit amet consectetur."
 		endpoint = "Be part<br>of our<br>story!"
@@ -127,6 +130,7 @@ googleAnalytics = ""
 
 	# Team section
 	[params.team]
+        enable = true
 		title = "Our amazing team"
 		subtitle = "Lorem ipsum dolor sit amet consectetur."
 		description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde."
@@ -164,27 +168,31 @@ googleAnalytics = ""
 			]
 
 	# Client section
-	# All the clients' logos are stored under 'static/img/logos'.
-	# Replace them with your clients's logos.
-	[[params.clients]]
-		logo = "envato.jpg"
-		link = "#"
+    [params.clients_list]
+        enable = true
 
-	[[params.clients]]
-		logo = "designmodo.jpg"
-		link = "#"
+    	# All the clients' logos are stored under 'static/img/logos'.
+    	# Replace them with your clients's logos.
+    	[[params.clients]]
+    		logo = "envato.jpg"
+    		link = "#"
 
-	[[params.clients]]
-		logo = "themeforest.jpg"
-		link = "#"
+    	[[params.clients]]
+    		logo = "designmodo.jpg"
+    		link = "#"
 
-	[[params.clients]]
-		logo = "creative-market.jpg"
-		link = "#"
+    	[[params.clients]]
+    		logo = "themeforest.jpg"
+    		link = "#"
+
+    	[[params.clients]]
+    		logo = "creative-market.jpg"
+    		link = "#"
 
 
 	# Contact section
 	[params.contact]
+        enable = true
 		title = "Contact us"
 		subtitle  = "Lorem ipsum dolor sit amet consectetur."
 		buttonText = "Send message"
@@ -209,6 +217,7 @@ googleAnalytics = ""
 
 	# Footer section
 	[params.footer]
+        enable = true
 		copyright = "Published under the Apache License 2.0."
 
 		[[params.footer.social]]

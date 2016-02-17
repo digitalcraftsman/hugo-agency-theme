@@ -17,21 +17,35 @@
                 <li class="hidden">
                     <a href="#page-top"></a>
                 </li>
+                {{ if .Site.Params.services.enable }}
                 <li>
                     <a class="page-scroll" href="#services">{{ with .Site.Params.navigation.services }}{{ . | markdownify }}{{ end }}</a>
                 </li>
+                {{ end }}
+
+                {{ if .Site.Params.portfolio.enable }}
                 <li>
                     <a class="page-scroll" href="#portfolio">{{ with .Site.Params.navigation.portfolio }}{{ . | markdownify }}{{ end }}</a>
                 </li>
+                {{ end }}
+
+                {{ if .Site.Params.about.enable }}
                 <li>
                     <a class="page-scroll" href="#about">{{ with .Site.Params.navigation.about }}{{ . | markdownify }}{{ end }}</a>
                 </li>
+                {{ end }}
+
+                {{ if .Site.Params.team.enable }}
                 <li>
                     <a class="page-scroll" href="#team">{{ with .Site.Params.navigation.team }}{{ . | markdownify }}{{ end }}</a>
                 </li>
+                {{ end }}
+
+                {{ if .Site.Params.contact.enable }}
                 <li>
                     <a class="page-scroll" href="#contact">{{ with .Site.Params.navigation.contact }}{{ . | markdownify }}{{ end }}</a>
                 </li>
+                {{ end }}
             </ul>
         </div>
         {{ "<!-- /.navbar-collapse -->" | safeHTML }}
