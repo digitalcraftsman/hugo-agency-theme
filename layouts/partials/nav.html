@@ -17,6 +17,7 @@
                 <li class="hidden">
                     <a href="#page-top"></a>
                 </li>
+                {{ partial "nav-hook-pre.html" . }}
                 <li>
                     <a class="page-scroll" href="#services">{{ with .Site.Params.navigation.services }}{{ . | markdownify }}{{ end }}</a>
                 </li>
@@ -32,6 +33,7 @@
                 <li>
                     <a class="page-scroll" href="#contact">{{ with .Site.Params.navigation.contact }}{{ . | markdownify }}{{ end }}</a>
                 </li>
+                {{ partial "nav-hook-post.html" . }}
             </ul>
         </div>
         {{ "<!-- /.navbar-collapse -->" | safeHTML }}
