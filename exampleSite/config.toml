@@ -43,7 +43,7 @@ googleAnalytics = ""
 		team = "Team"
 		contact = "Contact"
 
-    # Add custom links. Those  pre- and postpended to the default menu above.
+    # Add custom links. Those can be pre- and postpended to the default menu above.
     # Use the weight attribute to order your custom links. Uncomment the example
     # below and replace the values with your own.
 
