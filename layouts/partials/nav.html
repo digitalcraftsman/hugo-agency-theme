@@ -17,6 +17,13 @@
                 <li class="hidden">
                     <a href="#page-top"></a>
                 </li>
+
+                {{ range .Site.Menus.prepend }}
+                <li>
+                    <a href="{{ .URL }}">{{ .Name | markdownify }}</a>
+                </li>
+                {{ end }}
+
                 {{ if .Site.Params.services.enable }}
                 <li>
                     <a class="page-scroll" href="#services">{{ with .Site.Params.navigation.services }}{{ . | markdownify }}{{ end }}</a>
@@ -44,6 +51,12 @@
                 {{ if .Site.Params.contact.enable }}
                 <li>
                     <a class="page-scroll" href="#contact">{{ with .Site.Params.navigation.contact }}{{ . | markdownify }}{{ end }}</a>
+                </li>
+                {{ end }}
+
+                {{ range .Site.Menus.postpend }}
+                <li>
+                    <a href="{{ .URL }}">{{ .Name | markdownify }}</a>
                 </li>
                 {{ end }}
             </ul>

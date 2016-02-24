@@ -43,6 +43,22 @@ googleAnalytics = ""
 		team = "Team"
 		contact = "Contact"
 
+    # Add custom links. Those  pre- and postpended to the default menu above.
+    # Use the weight attribute to order your custom links. Uncomment the example
+    # below and replace the values with your own.
+
+    # prepended links
+    #[[menu.prepend]]
+    #    url = "http://gohugo.io"
+    #    name = "Hugo"
+    #    weight = 10
+
+    # postpended links
+    [[menu.postpend]]
+        url = "http://gohugo.io"
+        name = "External link"
+        weight = 10
+
 
 	# Hero section
 	[params.hero]
