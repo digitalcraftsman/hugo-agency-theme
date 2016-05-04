@@ -5,10 +5,13 @@
 <meta name="author" content="{{ with .Site.Params.name }}{{ . }}{{ end }}">
 {{ .Hugo.Generator }}
 <title>{{ .Site.Title }}</title>
-{{ "<!-- Bootstrap Core CSS -->" | safeHTML }}
+{{ "<!-- Stylesheets -->" | safeHTML }}
 <link href="{{ .Site.BaseURL }}css/bootstrap.min.css" rel="stylesheet">
-{{ "<!-- Custom CSS -->" | safeHTML }}
 <link href="{{ .Site.BaseURL }}css/agency.css" rel="stylesheet">
+{{ range .Site.Params.custom_css }}
+    <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
+{{ end }}
+
 {{ "<!-- Custom Fonts -->" | safeHTML }}
 <link href="{{ .Site.BaseURL }}font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">

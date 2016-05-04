@@ -1,7 +1,7 @@
 # Site settings
 baseurl = "http://replace-this-with-your-hugo-site.com/"
 languageCode = "en-us"
-title = "Hugo Agency Theme"
+title = "Agency"
 theme = "hugo-agency-theme"
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = ""
@@ -32,6 +32,10 @@ googleAnalytics = ""
     # - click the confirm link in the email from www.formspree.io
     # - you're done. Happy mailing!
 	email = "your@email.com"
+
+    # Link custom assets relative to /statuc
+    custom_css = []
+    custom_js  = []
 
 
 	# Navigation
