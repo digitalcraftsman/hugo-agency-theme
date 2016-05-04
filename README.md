@@ -5,29 +5,10 @@ Agency Theme is a one page portfolio for companies and freelancers based on the 
 ![Hugo Agency Theme screenshot](https://raw.githubusercontent.com/digitalcraftsman/hugo-agency-theme/master/images/screenshot.png)
 
 
-## Contents
-
-- [Installation](#installation)
-- [Getting started](#getting-started)
-    - [The config file](#the-config-file)
-    - [Change the hero background](#change-the-hero-background)
-    - [Present your skills](#present-your-skills) 
-    - [Create your portfolio](#create-your-portfolio)
-    - [Show what happened](#show-what-happened)
-    - [Introduce your team](#introduce-your-team)
-    - [List your clients](#list-your-clients)
-    - [Make the contact form working](#make-the-contact-form-working)
-    - [Nearly finished](#nearly-finished)
-- [Contributing](#contributing)
-- [License](#license)
-- [Annotations](#annotations)
-
-
 ## Installation
 
 Inside the folder of your Hugo site run:
 
-    $ mkdir themes
     $ cd themes
     $ git clone https://github.com/digitalcraftsman/hugo-agency-theme
 
@@ -151,9 +132,9 @@ Since this page will be static, you can use [formspree.io](//formspree.io/) as p
 
 In order to see your site in action, run Hugo's built-in local server. 
 
-    $ hugo server -w
+    $ hugo server
 
-Now enter `localhost:1313` in the address bar of your browser.
+Now enter [`localhost:1313`](http://localhost:1313/) in the address bar of your browser.
 
 
 ## Contributing
@@ -166,6 +147,9 @@ Did you found a bug or got an idea for a new feature? Feel free to use the [issu
 This theme is released under the Apache License 2.0 For more information read the [License](//github.com/digitalcraftsman/hugo-agency-theme/blob/master/LICENSE).
 
 
-## Annotations
+## Acknowledgements
 
-Thanks to [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project.
+Thanks to 
+
+- [David Miller](//github.com/davidtmiller) for creating this theme
+- [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project.
