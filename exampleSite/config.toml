@@ -33,7 +33,7 @@ googleAnalytics = ""
     # - you're done. Happy mailing!
 	email = "your@email.com"
 
-    # Link custom assets relative to /statuc
+    # Link custom assets relative to /static
     custom_css = []
     custom_js  = []
 
