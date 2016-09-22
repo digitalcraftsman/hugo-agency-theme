@@ -13,6 +13,10 @@
 <script src="{{ .Site.BaseURL }}js/agency.js"></script>
 {{ template "_internal/google_analytics.html" . }}
 
+{{ with .Site.Params.analytics.piwik }}
+  {{ partial "_analytics/piwik.html" . }}
+{{ end }}
+
 {{ range .Site.Params.custom_js }}
     <script src="{{ . | absURL }}"></script>
 {{ end }}
