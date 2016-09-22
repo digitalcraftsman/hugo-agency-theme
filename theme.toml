@@ -3,7 +3,7 @@ license = "Apache License 2.0"
 licenselink = "//github.com/digitalcraftsman/hugo-agency-theme/blob/master/LICENSE"
 description = "A one page portfolio for companies and freelancers."
 homepage = "//github.com/digitalcraftsman/hugo-agency-theme"
-tags = ["portfolio", "company", "contact form", "timeline", "google analytics"]
+tags = ["portfolio", "company", "contact form", "timeline", "google analytics", "piwik"]
 min_version = 0.15
 
 [author]
