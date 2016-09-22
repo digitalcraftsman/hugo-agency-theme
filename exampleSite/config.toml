@@ -41,13 +41,13 @@ googleAnalytics = ""
     disableFonts = false
 
     # Optional piwik tracking
-    [params.analytics.piwik]
-      URL = "https://stats.example.com"
-      ID = "42"
-      # Track all subdomains with "*.example.com"
-      domain = "www.example.com"
-      # Optional integrity check hash
-      hash = "sha512-RfeD0pacGTqy9m7U6PgehQfS4cc7SIt+e+P+H5e848kEvB/RW84CUGO3O4O3LNbxjevym6KPUZ8muPsMrI8WIw=="
+    #[params.analytics.piwik]
+    #  URL = "https://stats.example.com"
+    #  ID = "42"
+    #   Track all subdomains with "*.example.com"
+    #  domain = "www.example.com"
+    #  # Optional integrity check hash
+    #  hash = "sha512-RfeD0pacGTqy9m7U6PgehQfS4cc7SIt+e+P+H5e848kEvB/RW84CUGO3O4O3LNbxjevym6KPUZ8muPsMrI8WIw=="
 
 	# Navigation
 	[params.navigation]
