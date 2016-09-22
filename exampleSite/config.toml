@@ -38,7 +38,7 @@ googleAnalytics = ""
     custom_js  = []
     # Possibility to disable external/additional fonts
     # Exception: Fontawesome
-    disableFonts = true
+    disableFonts = false
 
 
 	# Navigation
