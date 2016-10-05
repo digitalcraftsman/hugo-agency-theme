@@ -1,5 +1,9 @@
 # Changelog
 
+### 2016-09-22
+Tracking with piwik as alternative to Google Analytics is now possible. For performance and privacy reasons fonts can now be disabled and the reliance on 3rd party hosted libraries was reduced.
+
+[Show me the diff](https://github.com/digitalcraftsman/hugo-agency-theme/compare/bf89cf62acf794db3a387b39f8792df807ba1698...615f5242d0c2c20b2062545d48cf15125d9ca91d)
 
 ### 2016-05-04
 
