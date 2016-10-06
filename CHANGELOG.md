@@ -1,13 +1,13 @@
 # Changelog
 
-### 2016/04/05
+
+### 2016-05-04
 
 Stylesheets and JavaScript files can now be easier linked directly from the content file with `custom_css` and `custom_js`. The paths need to be relative to the static directory.
 
 [Show me the diff](https://github.com/digitalcraftsman/hugo-agency-theme/commit/178dc61b1b0ee09e6a00299ee2c2ee70168b0eba)
 
-
-### 2015/29/11
+### 2015-11-29
 
 Hugo v0.15 is required in order to upgrade.
 
