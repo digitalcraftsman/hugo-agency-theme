@@ -637,15 +637,53 @@ section h3.section-subheading {
     border: 7px solid #fff;
 }
 
-.team-member h4 {
-    margin-top: 25px;
-    margin-bottom: 0;
-    text-transform: none;
-}
-
 .team-member p {
     margin-top: 0;
 }
+.team-member h3 {
+    text-transform: none;
+    font-weight: 600;
+    color: #333;
+}
+
+.team-member h4 {
+    font-size: 16px;
+    text-transform: none;
+    font-weight: 400;
+    color: #777;
+    margin-bottom: 0;
+}
+
+.team-member h4 a {
+    text-transform: none;
+}
+
+.team-member h5 {
+    font-size: 14px;
+    text-transform: none;
+    font-style: italic;
+    font-weight: 200;
+    color: #777;
+    margin: 0;
+    margin-bottom: 15px
+
+}
+
+.team-member h5 a {
+    text-transform: none;
+}
+
+.team-member ul {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.team-bio {
+    padding: 15px
+}
+
 
 aside.clients img {
     margin: 50px auto;
@@ -737,7 +775,8 @@ footer ul.quicklinks {
 }
 
 ul.social-buttons {
-    margin-bottom: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 ul.social-buttons li a {
@@ -864,4 +903,4 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #fed136;
-}
+}-
