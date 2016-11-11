@@ -1,5 +1,12 @@
 # Changelog
 
+### 2016-11-11
+Center team members and improve variety alignment issues.
+Add additional information options for team members.
+Make services clickable via url attribute.
+Possibility to substitute formspring.io for forms.
+Enable removal of contact form fields.
+
 ### 2016-09-22
 Tracking with piwik as alternative to Google Analytics is now possible. For performance and privacy reasons fonts can now be disabled and the reliance on 3rd party hosted libraries was reduced.
 
