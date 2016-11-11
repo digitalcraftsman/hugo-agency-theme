@@ -635,8 +635,12 @@ section h3.section-subheading {
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: stretch;
+}
+
+.flexbox-center {
+  justify-content: center;
 }
 
 .team-member {

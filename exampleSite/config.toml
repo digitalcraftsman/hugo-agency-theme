@@ -236,6 +236,8 @@ googleAnalytics = ""
   # Contact section
   [params.contact]
     enable = true
+    # Possibility to center items
+    # center = true
     title = "Contact us"
     subtitle  = "Lorem ipsum dolor sit amet consectetur."
     buttonText = "Send message"
