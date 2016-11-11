@@ -16,7 +16,12 @@
     </div>
     <div class="row">
       <div class="col-lg-12">
+        {{ if not .Site.Params.contact.postURL }}
         <form  action="//formspree.io/{{ with .Site.Params.email }}{{.}}{{ end }}" method="POST" name="sentMessage" id="contactForm" novalidate>
+        {{ else }}
+        <form  action="{{ .Site.Params.contact.postURL }}" method="POST" name="sentMessage" id="contactForm" novalidate>
+        {{ end }}
+
           <div class="row">
             <div class="col-md-6">
 
