@@ -6,14 +6,14 @@
 {{ .Hugo.Generator }}
 <title>{{ .Site.Title }}</title>
 {{ "<!-- Stylesheets -->" | safeHTML }}
-<link href="{{ .Site.BaseURL }}css/bootstrap.min.css" rel="stylesheet">
+<link href="{{ .Site.BaseURL }}css/bootstrap-v3.3.7/bootstrap.min.css" rel="stylesheet">
 <link href="{{ .Site.BaseURL }}css/agency.css" rel="stylesheet">
 {{ range .Site.Params.custom_css }}
   <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
 {{ end }}
 
 {{ "<!-- Custom Fonts -->" | safeHTML }}
-<link href="{{ .Site.BaseURL }}font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="{{ .Site.BaseURL }}font-awesome-v4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 {{ with not .Site.Params.disableFonts }}
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
