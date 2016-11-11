@@ -627,6 +627,18 @@ section h3.section-subheading {
     }
 }
 
+.flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
 .team-member {
     margin-bottom: 50px;
     text-align: center;
@@ -651,7 +663,7 @@ section h3.section-subheading {
     text-transform: none;
     font-weight: 400;
     color: #777;
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 
 .team-member h4 a {
@@ -664,9 +676,11 @@ section h3.section-subheading {
     font-style: italic;
     font-weight: 200;
     color: #777;
-    margin: 0;
     margin-bottom: 15px
+}
 
+.team-member .report  {
+    margin-top: 0px;
 }
 
 .team-member h5 a {
@@ -676,6 +690,7 @@ section h3.section-subheading {
 .team-member ul {
     list-style: none;
     text-align: center;
+    margin-top: 15px;
     margin-bottom: 15px;
     padding: 0;
 }

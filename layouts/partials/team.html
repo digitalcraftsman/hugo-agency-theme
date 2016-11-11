@@ -7,9 +7,9 @@
         <h3 class="section-subheading text-mutedwith ">{{ with .Site.Params.team.subtitle }}{{ . | markdownify }}{{ end }}</h3>
       </div>
     </div>
-    <div class="row">
+    <div class="row flexbox">
       {{ range .Site.Params.team.members }}
-        <div class="col-sm-4">
+        <div class="col-sm-4 col">
           <div class="team-member">
             <img src="img/team/{{ .img }}" class="img-responsive img-circle" alt="">
             <h3>{{ .name | markdownify }}</h3>
@@ -18,7 +18,7 @@
             <h4>{{ . | markdownify }}</h4>
             {{ end }}
             {{ with .reportsTo }}
-            <h5>Reports to {{ . | markdownify }}</h5>
+            <h5 class="report">Reports to {{ . | markdownify }}</h5>
             {{ end }}
 
             {{ with .livesIn }}
