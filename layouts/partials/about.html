@@ -10,6 +10,7 @@
     <div class="row">
       <div class="col-lg-12">
         <ul class="timeline">
+
           {{ range $i, $e := .Site.Params.about.events }}
             <li {{ if (not (modBool $i 2)) }}class="timeline-inverted" {{ end }}>
               <div class="timeline-image">
@@ -26,6 +27,7 @@
               </div>
             </li>
           {{ end }}
+
           <li class="timeline-inverted">
             <div class="timeline-image">
               <h4>{{ with .Site.Params.about.endpoint }}{{ . | markdownify }}{{ end }}</h4>
