@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+  {{ partial "head.html" . }}
+
+  <body id="page-top" class="index">
+    {{ partial "nav.html" . }}
+
+    {{ "<!-- 404 -->" | safeHTML }}
+    <header>
+      <div class="container">
+        <div class="404">
+          <div class="intro-text">
+            <div class="intro-heading">Page not found</div>
+
+            {{ with .Site.Params.error404 }}
+            <div class="intro-lead-in">{{ .heading | markdownify }}</div>
+
+            <div class="intro-lead-in">{{ .text | markdownify }}</div>
+            {{ else }}
+            <div class="intro-lead-in">Requested page could not be found.</div>
+            <div class="intro-lead-in">You can always go back to our main <a href="/">page</a>.</div>
+            {{ end }}
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+    {{ if .Site.Params.footer.enable }}
+      {{ partial "footer.html" . }}
+    {{ end }}
+
+    {{ partial "js.html" . }}
+  </body>
+</html>
