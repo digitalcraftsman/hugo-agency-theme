@@ -1,14 +1,17 @@
 {{ "<!-- jQuery -->" | safeHTML }}
-<script src="{{ .Site.BaseURL }}js/jquery-v1.12.4/jquery.min.js"></script>
+<script src="{{ .Site.BaseURL }}js/jquery-v3.3.1/jquery.min.js"></script>
+
 {{ "<!-- Bootstrap Core JavaScript -->" | safeHTML }}
 <script src="{{ .Site.BaseURL }}js/bootstrap-v3.3.7/bootstrap.min.js"></script>
+
 {{ "<!-- Plugin JavaScript -->" | safeHTML }}
-<script src="{{ .Site.BaseURL }}js/jquery.easing-v1.3.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/classie-v1.0.1.js"></script>
 <script src="{{ .Site.BaseURL }}js/cbpAnimatedHeader-v1.0.0.min.js"></script>
+
 {{ "<!-- Contact Form JavaScript -->" | safeHTML }}
 <script src="{{ .Site.BaseURL }}js/jqBootstrapValidation-v1.3.6.js"></script>
 <script src="{{ .Site.BaseURL }}js/contact_me.js"></script>
+
 {{ "<!-- Custom Theme JavaScript -->" | safeHTML }}
 <script src="{{ .Site.BaseURL }}js/agency.js"></script>
 {{ template "_internal/google_analytics.html" . }}
@@ -20,3 +23,5 @@
 {{ range .Site.Params.custom_js }}
   <script src="{{ . | absURL }}"></script>
 {{ end }}
+
+<script src="{{ .Site.BaseURL }}js/jquery-migrate-3.0.0.js"></script>

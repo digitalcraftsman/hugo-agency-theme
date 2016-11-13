@@ -2,6 +2,7 @@
 <aside class="clients">
   <div class="container">
     <div class="row">
+
       {{ range .Site.Params.clients }}
         <div class="col-md-3 col-sm-6">
           <a href="{{ .link }}">
@@ -9,6 +10,7 @@
           </a>
         </div>
       {{ end }}
+
     </div>
   </div>
 </aside>

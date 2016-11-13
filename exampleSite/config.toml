@@ -41,6 +41,13 @@ googleAnalytics = ""
   # Exception: Fontawesome
   disableFonts = false
 
+  # 404 error customization
+  # Images have to be added in img/404/
+  [params.error404]
+    heading = "Page couldn't be found"
+    text = "Please visit [this page](/#instead)"
+    image = "404.jpg"
+
   # Optional piwik tracking
   #[params.analytics.piwik]
   #  URL = "https://stats.example.com"
