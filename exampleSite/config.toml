@@ -186,6 +186,7 @@ googleAnalytics = ""
 
     # All team member's pictures are stored under 'static/img/team'.
     # Replace them with your own too.
+    # Suggestion: Image size should be at least 360px*360px or the alignment might be affected.
     [[params.team.members]]
       img = "1.jpg"
       name = "Kay Garland"
@@ -232,6 +233,7 @@ googleAnalytics = ""
 
       # All the clients' logos are stored under 'static/img/logos'.
       # Replace them with your clients's logos.
+      # Suggestion: .svg in the size of 280px*80px looks good
       [[params.clients]]
         logo = "envato.jpg"
         link = "#"
