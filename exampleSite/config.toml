@@ -232,6 +232,8 @@ She worked at Pied Piper for years until they went belly up."""
       enable = true
       # Possibility to center items
       #center = true
+      # Optional client title specifying the involvement
+      #title = "Used and trusted by"
 
       # All the clients' logos are stored under 'static/img/logos'.
       # Replace them with your clients's logos.
