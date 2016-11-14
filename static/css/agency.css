@@ -186,6 +186,28 @@ fieldset[disabled] .btn-xl.active {
     color: #fec503;
 }
 
+.navbar-brand>img {
+    height: 50px;
+    max-width: 250px;
+    margin: -15px;
+}
+
+@media(min-width:768px) {
+    .navbar-brand>img {
+        height: 50px;
+        max-width: 300px;
+        margin: -15px;
+    }
+}
+
+@media(min-width:992px) {
+    .navbar-brand>img {
+        height: 50px;
+        max-width: 400px;
+        margin: -15px;
+    }
+}
+
 .navbar-default .navbar-collapse {
     border-color: rgba(255,255,255,.02);
 }
