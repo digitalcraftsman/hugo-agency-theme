@@ -703,9 +703,21 @@ section h3.section-subheading {
     padding: 15px
 }
 
+@media(min-width:992px) {
+    aside.clients img {
+        margin: 50px auto;
+    }
+}
 
 aside.clients img {
-    margin: 50px auto;
+    margin-top: 50px;
+}
+
+aside .heading {
+    text-transform: none;
+    color: #777;
+    margin-top: 20px;
+    margin-bottom: -40px;
 }
 
 section#contact {

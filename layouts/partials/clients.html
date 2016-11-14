@@ -1,6 +1,11 @@
 {{ "<!-- Clients Aside -->" | safeHTML }}
 <aside class="clients">
   <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+<h4 class="heading">{{ with .Site.Params.clients_list.title }}{{ . | markdownify }}{{ end }}</h4>
+      </div>
+    </div>
     <div class="row flexbox{{ if .Site.Params.clients_list.center }} flexbox-center{{ end }}">
 
       {{ range .Site.Params.clients }}
