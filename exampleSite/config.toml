@@ -178,6 +178,8 @@ googleAnalytics = ""
   # Team section
   [params.team]
     enable = true
+    # Possibility to center items
+    # center = true
     title = "Our amazing team"
     subtitle = "Lorem ipsum dolor sit amet consectetur."
     description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde."
@@ -248,8 +250,6 @@ googleAnalytics = ""
   # Contact section
   [params.contact]
     enable = true
-    # Possibility to center items
-    # center = true
     title = "Contact us"
     subtitle  = "Lorem ipsum dolor sit amet consectetur."
     buttonText = "Send message"
