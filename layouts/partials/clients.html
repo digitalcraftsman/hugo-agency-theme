@@ -1,10 +1,10 @@
 {{ "<!-- Clients Aside -->" | safeHTML }}
 <aside class="clients">
   <div class="container">
-    <div class="row">
+    <div class="row flexbox{{ if .Site.Params.clients_list.center }} flexbox-center{{ end }}">
 
       {{ range .Site.Params.clients }}
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-3 col-sm-6 col">
           <a href="{{ .link }}">
             <img src="img/logos/{{ .logo }}" class="img-responsive img-centered" alt="">
           </a>

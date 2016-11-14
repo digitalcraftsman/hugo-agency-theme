@@ -227,6 +227,8 @@ googleAnalytics = ""
   # Client section
     [params.clients_list]
       enable = true
+    # Possibility to center items
+    # center = true
 
       # All the clients' logos are stored under 'static/img/logos'.
       # Replace them with your clients's logos.
