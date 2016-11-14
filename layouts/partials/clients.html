@@ -5,9 +5,13 @@
 
       {{ range .Site.Params.clients }}
         <div class="col-md-3 col-sm-6 col">
-          <a href="{{ .link }}">
+          {{ if .link }}
+            <a href="{{ .link }}">
+              <img src="img/logos/{{ .logo }}" class="img-responsive img-centered" alt="">
+            </a>
+          {{ else }}
             <img src="img/logos/{{ .logo }}" class="img-responsive img-centered" alt="">
-          </a>
+          {{ end }}
         </div>
       {{ end }}
 
