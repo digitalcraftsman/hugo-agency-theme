@@ -10,11 +10,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand page-scroll" href="{{ if .IsHome }}/#page-top{{ else }}{{ .Site.BaseURL }}{{ end }}">
-          {{ with .Site.Params.navigation.brand }}{{ . | markdownify }}{{ end }}
-      </a>
-    </div>
+      {{ if .Site.Params.navigation.logo }}
+        <a class="navbar-brand page-scroll" href="{{ if .IsHome }}/#page-top{{ else }}{{ .Site.BaseURL }}{{ end }}">{{ . | markdownify }}
+          <img src="img/{{ .Site.Params.navigation.logo }}" class="img-responsive" alt="{{ .Site.Params.navigation.brand | markdownify }}">
+        </a>
+      {{ else }}
+        <a class="navbar-brand page-scroll" href="{{ if .IsHome }}/#page-top{{ else }}{{ .Site.BaseURL }}{{ end }}">
+          {{ .Site.Params.navigation.brand | markdownify }}
+        </a>
+      {{ end }}
 
+    </div>
     {{ "<!-- Collect the nav links, forms, and other content for toggling -->" | safeHTML }}
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
