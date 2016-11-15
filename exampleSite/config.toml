@@ -256,7 +256,6 @@ She worked at Pied Piper for years until they went belly up."""
         logo = "creative-market.jpg"
         link = "#"
 
-
   # Contact section
   [params.contact]
     enable = true
@@ -281,6 +280,14 @@ She worked at Pied Piper for years until they went belly up."""
       text = "Your Message *"
       warning = "Please enter a message."
 
+      # Add optional form fields to identify contact forms
+      #[[params.contact.form.hidden]]
+      #  name = "someID"
+      #  value = "example.com"
+      #
+      #[[params.contact.form.hidden]]
+      # Special values for name such as "page" and "site" will be autofilled
+      #  name = "page"
 
   # Footer section
   [params.footer]
