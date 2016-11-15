@@ -61,6 +61,15 @@
               <button type="submit" class="btn btn-xl">{{ with .Site.Params.contact.buttonText }}{{ . }}{{ end }}</button>
             </div>
           </div>
+          {{ range .Site.Params.contact.form.hidden }}
+            {{ if eq .name "site" }}
+              <input type="hidden" name="{{ .name }}" value="{{ $.Permalink }}"/>
+            {{ else if eq .name "page" }}
+              <input type="hidden" name="{{ .name }}" value="{{ $.URL }}"/>
+            {{ else }}
+              <input type="hidden" name="{{ .name }}" value="{{ .value }}"/>
+            {{ end }}
+          {{ end }}
         </form>
       </div>
     </div>
