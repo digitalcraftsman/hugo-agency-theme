@@ -11,12 +11,12 @@
         <span class="icon-bar"></span>
       </button>
       {{ if .Site.Params.navigation.logo }}
-        <a class="navbar-brand page-scroll" href="{{ if .IsHome }}/#page-top{{ else }}{{ .Site.BaseURL }}{{ end }}">{{ .Site.Params.navigation.brand | markdownify }}
-          <img src="img/{{ .Site.Params.navigation.logo }}" class="img-responsive" alt="{{ .Site.Params.navigation.brand | markdownify }}">
+        <a class="navbar-brand page-scroll" href="{{ if .IsHome }}/#page-top{{ else }}{{ .Site.BaseURL }}{{ end }}">{{ .Site.Params.navigation.brand }}
+          <img src="img/{{ .Site.Params.navigation.logo }}" class="img-responsive" alt="{{ .Site.Params.navigation.brand }}">
         </a>
       {{ else }}
         <a class="navbar-brand page-scroll" href="{{ if .IsHome }}/#page-top{{ else }}{{ .Site.BaseURL }}{{ end }}">
-          {{ .Site.Params.navigation.brand | markdownify }}
+          {{ .Site.Params.navigation.brand }}
         </a>
       {{ end }}
 
@@ -36,37 +36,37 @@
 
         {{ if .Site.Params.services.enable }}
           <li>
-            <a class="page-scroll" href="/#services">{{ with .Site.Params.navigation.services }}{{ . | markdownify }}{{ end }}</a>
+            <a class="page-scroll" href="/#services">{{ with .Site.Params.navigation.services }}{{ . }}{{ end }}</a>
           </li>
         {{ end }}
 
         {{ if .Site.Params.portfolio.enable }}
           <li>
-            <a class="page-scroll" href="/#portfolio">{{ with .Site.Params.navigation.portfolio }}{{ . | markdownify }}{{ end }}</a>
+            <a class="page-scroll" href="/#portfolio">{{ with .Site.Params.navigation.portfolio }}{{ . }}{{ end }}</a>
           </li>
         {{ end }}
 
         {{ if .Site.Params.about.enable }}
           <li>
-            <a class="page-scroll" href="/#about">{{ with .Site.Params.navigation.about }}{{ . | markdownify }}{{ end }}</a>
+            <a class="page-scroll" href="/#about">{{ with .Site.Params.navigation.about }}{{ . }}{{ end }}</a>
           </li>
         {{ end }}
 
         {{ if .Site.Params.team.enable }}
           <li>
-            <a class="page-scroll" href="/#team">{{ with .Site.Params.navigation.team }}{{ . | markdownify }}{{ end }}</a>
+            <a class="page-scroll" href="/#team">{{ with .Site.Params.navigation.team }}{{ . }}{{ end }}</a>
           </li>
         {{ end }}
 
         {{ if .Site.Params.contact.enable }}
           <li>
-            <a class="page-scroll" href="/#contact">{{ with .Site.Params.navigation.contact }}{{ . | markdownify }}{{ end }}</a>
+            <a class="page-scroll" href="/#contact">{{ with .Site.Params.navigation.contact }}{{ . }}{{ end }}</a>
           </li>
         {{ end }}
 
         {{ range .Site.Menus.postpend }}
           <li>
-            <a href="{{ .URL }}">{{ .Name | markdownify }}</a>
+            <a href="{{ .URL }}">{{ .Name }}</a>
           </li>
         {{ end }}
       </ul>
