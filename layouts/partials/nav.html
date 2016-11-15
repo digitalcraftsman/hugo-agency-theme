@@ -11,7 +11,7 @@
         <span class="icon-bar"></span>
       </button>
       {{ if .Site.Params.navigation.logo }}
-        <a class="navbar-brand page-scroll" href="{{ if .IsHome }}/#page-top{{ else }}{{ .Site.BaseURL }}{{ end }}">{{ .Site.Params.navigation.brand }}
+        <a class="navbar-brand page-scroll" href="{{ if .IsHome }}/#page-top{{ else }}{{ .Site.BaseURL }}{{ end }}">
           <img src="img/{{ .Site.Params.navigation.logo }}" class="img-responsive" alt="{{ .Site.Params.navigation.brand }}">
         </a>
       {{ else }}
