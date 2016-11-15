@@ -58,7 +58,7 @@
             <div class="clearfix"></div>
             <div class="col-lg-12 text-center">
               <div id="success"></div>
-              <button type="submit" class="btn btn-xl">{{ with .Site.Params.contact.buttonText }}{{ . | markdownify }}{{ end }}</button>
+              <button type="submit" class="btn btn-xl">{{ with .Site.Params.contact.buttonText }}{{ . }}{{ end }}</button>
             </div>
           </div>
         </form>
