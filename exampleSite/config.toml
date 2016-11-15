@@ -31,6 +31,13 @@ googleAnalytics = ""
   # - send a dummy email yourself to confirm your account
   # - click the confirm link in the email from www.formspree.io
   # - you're done. Happy mailing!
+
+  # It is possible to substitute formspring with other providers
+  # as an example the mailout plugin from caddy.
+  # Provide the post URL for the form and depending on the provider
+  # add some custom JS script to finish the implementation.
+  # postURL = "https://example.com/mailout/"
+
   email = "your@email.com"
 
   # Link custom assets relative to /static
@@ -58,6 +65,8 @@ googleAnalytics = ""
   # Navigation
   [params.navigation]
     brand = "The Agency"
+    # Optional logo as brand stored in img/
+    #logo = "logo.svg"
     services = "Services"
     portfolio = "Portfolio"
     about = "About"
@@ -171,12 +180,15 @@ googleAnalytics = ""
   # Team section
   [params.team]
     enable = true
+    # Possibility to center items
+    #center = true
     title = "Our amazing team"
     subtitle = "Lorem ipsum dolor sit amet consectetur."
     description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde."
 
     # All team member's pictures are stored under 'static/img/team'.
     # Replace them with your own too.
+    # Suggestion: Image size should be at least 360px*360px or the alignment might be affected.
     [[params.team.members]]
       img = "1.jpg"
       name = "Kay Garland"
@@ -188,7 +200,9 @@ googleAnalytics = ""
         "Maintainer for [awesome-project](#)",
         "Open Source [community management](#)"
       ]
-      bio = "Kay is an awesome Lead Designer with heaps of experience in the field of UX. She worked at Pied Piper for years until they went belly up."
+      # For bio markdown and even multiline strings are available.
+      bio = """Kay is an awesome Lead Designer with heaps of experience in the field of UX.  
+She worked at Pied Piper for years until they went belly up."""
       social = [
         ["fa-twitter", "#"],
         ["fa-facebook", "#"],
@@ -218,9 +232,14 @@ googleAnalytics = ""
   # Client section
     [params.clients_list]
       enable = true
+      # Possibility to center items
+      #center = true
+      # Optional client title specifying the involvement
+      #title = "Used and trusted by"
 
       # All the clients' logos are stored under 'static/img/logos'.
       # Replace them with your clients's logos.
+      # Suggestion: .svg in the size of 280px*80px looks good
       [[params.clients]]
         logo = "envato.jpg"
         link = "#"
@@ -241,17 +260,9 @@ googleAnalytics = ""
   # Contact section
   [params.contact]
     enable = true
-    # Possibility to center items
-    # center = true
     title = "Contact us"
     subtitle  = "Lorem ipsum dolor sit amet consectetur."
     buttonText = "Send message"
-
-    # It is possible to substitute formspring with other providers
-    # as an example the mailout plugin from caddy.
-    # Provide the post URL for the form and depending on the provider
-    # add some custom JS script to finish the implementation.
-    # postURL = "https://example.com/mailout/"
 
     # 'warning' defines error messages for invalid inputs
     [params.contact.form.name]

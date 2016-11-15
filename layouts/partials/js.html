@@ -14,7 +14,8 @@
 
 {{ "<!-- Custom Theme JavaScript -->" | safeHTML }}
 <script src="{{ .Site.BaseURL }}js/agency.js"></script>
-{{ template "_internal/google_analytics.html" . }}
+
+{{ template "_internal/google_analytics_async.html" . }}
 
 {{ with .Site.Params.analytics.piwik }}
   {{ partial "_analytics/piwik.html" . }}
@@ -23,5 +24,3 @@
 {{ range .Site.Params.custom_js }}
   <script src="{{ . | absURL }}"></script>
 {{ end }}
-
-<script src="{{ .Site.BaseURL }}js/jquery-migrate-3.0.0.js"></script>
