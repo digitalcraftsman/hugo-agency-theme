@@ -54,10 +54,24 @@
                 <p class="help-block text-danger"></p>
               </div>
               {{ end }}
+
             </div>
             <div class="clearfix"></div>
             <div class="col-lg-12 text-center">
-              <div id="success"></div>
+              <div class="text-success" id="success" style="display:none;">
+                {{ with .Site.Params.contact.thanks }}
+                  {{ . | markdownify }}
+                {{ else }}
+                  Thank you for contacting us.
+                {{ end }}
+              </div>
+              <div class="text-danger" id="error" style="display:none;">
+                {{ with .Site.Params.contact.error }}
+                  {{ . | markdownify }}
+                {{ else }}
+                  Message could not be send. Please contact us at {{ .Site.Params.contact.email }} instead.
+                {{ end }}
+              </div><br />
               <button type="submit" class="btn btn-xl">{{ with .Site.Params.contact.buttonText }}{{ . }}{{ end }}</button>
             </div>
           </div>
