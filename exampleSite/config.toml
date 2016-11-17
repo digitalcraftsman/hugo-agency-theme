@@ -20,26 +20,6 @@ googleAnalytics = ""
   name = "Your name"
   description = "Your description"
 
-  # Since this template is static, the contact form uses www.formspree.io as a
-  # proxy. The form makes a POST request to their servers to send the actual
-  # email. Visitors can send up to a 1000 emails each month for free.
-  #
-  # What you need to do for the setup?
-  #
-  # - set your email address under 'email' below
-  # - upload the generated site to your server
-  # - send a dummy email yourself to confirm your account
-  # - click the confirm link in the email from www.formspree.io
-  # - you're done. Happy mailing!
-
-  # It is possible to substitute formspring with other providers
-  # as an example the mailout plugin from caddy.
-  # Provide the post URL for the form and depending on the provider
-  # add some custom JS script to finish the implementation.
-  # postURL = "https://example.com/mailout/"
-
-  email = "your@email.com"
-
   # Link custom assets relative to /static
   custom_css = []
   custom_js  = []
@@ -262,6 +242,26 @@ She worked at Pied Piper for years until they went belly up."""
     title = "Contact us"
     subtitle  = "Lorem ipsum dolor sit amet consectetur."
     buttonText = "Send message"
+
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+
+    # It is possible to substitute formspring with other providers
+    # as an example the mailout plugin from caddy.
+    # Provide the post URL for the form and depending on the provider
+    # add some custom JS script to finish the implementation.
+    # postURL = "https://example.com/mailout/"
+
+    email = "your@email.com"
 
     # 'warning' defines error messages for invalid inputs
     [params.contact.form.name]
