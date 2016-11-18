@@ -152,4 +152,5 @@ This theme is released under the Apache License 2.0 For more information read th
 Thanks to 
 
 - [David Miller](//github.com/davidtmiller) for creating this theme
-- [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project.
+- [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project
+- [Michael Grosser](https://github.com/stp-ip) for contributing a significant amount of improvements
