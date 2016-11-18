@@ -263,6 +263,10 @@ She worked at Pied Piper for years until they went belly up."""
 
     email = "your@email.com"
 
+    # Success and error message overwrite for async contact form
+    #thanks = "Thank you for awesomely contacting us."
+    #error = "Message could not be send. Please contact us at mail@example.com instead."
+
     # 'warning' defines error messages for invalid inputs
     [params.contact.form.name]
       text = "Your Name *"
