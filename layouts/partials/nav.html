@@ -12,7 +12,7 @@
       </button>
       {{ if .Site.Params.navigation.logo }}
         <a class="navbar-brand page-scroll" href="{{ if .IsHome }}/#page-top{{ else }}{{ .Site.BaseURL }}{{ end }}">
-          <img src="img/{{ .Site.Params.navigation.logo }}" class="img-responsive" alt="{{ .Site.Params.navigation.brand }}">
+          <img src="{{ .Site.BaseURL }}img/{{ .Site.Params.navigation.logo }}" class="img-responsive" alt="{{ .Site.Params.navigation.brand }}">
         </a>
       {{ else }}
         <a class="navbar-brand page-scroll" href="{{ if .IsHome }}/#page-top{{ else }}{{ .Site.BaseURL }}{{ end }}">
@@ -25,7 +25,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li class="hidden">
-          <a href="#page-top"></a>
+          <a href="{{ if .IsHome }}/#page-top{{ else }}{{ .Site.BaseURL }}{{ end }}"></a>
         </li>
 
         {{ range .Site.Menus.prepend }}
@@ -36,31 +36,31 @@
 
         {{ if .Site.Params.services.enable }}
           <li>
-            <a class="page-scroll" href="/#services">{{ with .Site.Params.navigation.services }}{{ . }}{{ end }}</a>
+            <a class="page-scroll" href="{{ .Site.BaseURL }}#services">{{ with .Site.Params.navigation.services }}{{ . }}{{ end }}</a>
           </li>
         {{ end }}
 
         {{ if .Site.Params.portfolio.enable }}
           <li>
-            <a class="page-scroll" href="/#portfolio">{{ with .Site.Params.navigation.portfolio }}{{ . }}{{ end }}</a>
+            <a class="page-scroll" href="{{ .Site.BaseURL }}#portfolio">{{ with .Site.Params.navigation.portfolio }}{{ . }}{{ end }}</a>
           </li>
         {{ end }}
 
         {{ if .Site.Params.about.enable }}
           <li>
-            <a class="page-scroll" href="/#about">{{ with .Site.Params.navigation.about }}{{ . }}{{ end }}</a>
+            <a class="page-scroll" href="{{ .Site.BaseURL }}#about">{{ with .Site.Params.navigation.about }}{{ . }}{{ end }}</a>
           </li>
         {{ end }}
 
         {{ if .Site.Params.team.enable }}
           <li>
-            <a class="page-scroll" href="/#team">{{ with .Site.Params.navigation.team }}{{ . }}{{ end }}</a>
+            <a class="page-scroll" href="{{ .Site.BaseURL }}#team">{{ with .Site.Params.navigation.team }}{{ . }}{{ end }}</a>
           </li>
         {{ end }}
 
         {{ if .Site.Params.contact.enable }}
           <li>
-            <a class="page-scroll" href="/#contact">{{ with .Site.Params.navigation.contact }}{{ . }}{{ end }}</a>
+            <a class="page-scroll" href="{{ .Site.BaseURL }}#contact">{{ with .Site.Params.navigation.contact }}{{ . }}{{ end }}</a>
           </li>
         {{ end }}
 
