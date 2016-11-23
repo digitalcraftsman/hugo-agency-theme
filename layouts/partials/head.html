@@ -9,6 +9,7 @@
   {{ "<!-- Stylesheets -->" | safeHTML }}
   <link href="{{ .Site.BaseURL }}css/bootstrap-v3.3.7/bootstrap.min.css" rel="stylesheet">
   <link href="{{ .Site.BaseURL }}css/agency.css" rel="stylesheet">
+  <link href="{{ .Site.BaseURL }}css/jquery.form-validator-v2.3.44/theme-default.min.css" rel="stylesheet">
 
   {{ range .Site.Params.custom_css }}
     <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
