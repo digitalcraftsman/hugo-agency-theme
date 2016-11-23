@@ -12,7 +12,7 @@
 
 {{ template "_internal/google_analytics_async.html" . }}
 
-{{ with .Site.Params.analytics.piwik }}
+{{ if .Site.Params.analytics.piwik }}
   {{ partial "_analytics/piwik.html" . }}
 {{ end }}
 
