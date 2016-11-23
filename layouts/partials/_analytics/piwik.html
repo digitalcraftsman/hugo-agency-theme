@@ -2,17 +2,17 @@
 <script type="text/javascript" >
   var _paq = _paq || [];
   _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-  _paq.push(["setCookieDomain", "{{ .domain }}"]);
-  _paq.push(["setDomains", ["{{ .domain }}"]]);
+  _paq.push(["setCookieDomain", "{{ .Site.Params.analytics.piwik.domain }}"]);
+  _paq.push(["setDomains", ["{{ .Site.Params.analytics.piwik.domain }}"]]);
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u="{{ .URL }}/";
+    var u="{{ .Site.Params.analytics.piwik.URL }}/";
     _paq.push(['setTrackerUrl', u+'piwik.php']);
     _paq.push(['setSiteId', {{ .Site.Params.analytics.piwik.ID }}]);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; {{ if .hash }} g.integrity="{{ .hash }}"; g.crossorigin="anonymous";{{ end }} s.parentNode.insertBefore(g,s);
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; {{ if .Site.Params.analytics.piwik.hash }} g.integrity="{{ .Site.Params.analytics.piwik.hash }}"; g.crossorigin="anonymous";{{ end }} s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="{{ .URL }}/piwik.php?idsite={{ .ID }}" style="border:0;" alt="" /></p></noscript>
+<noscript><p><img src="{{ .URL }}/piwik.php?idsite={{ .Site.Params.analytics.piwik.ID }}" style="border:0;" alt="" /></p></noscript>
 <!-- End Piwik Code -->
