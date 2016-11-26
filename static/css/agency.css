@@ -361,6 +361,10 @@ section h3.section-subheading {
     font-weight: 400;
 }
 
+section#single {
+    padding: 50px 0;
+}
+
 @media(min-width:768px) {
     section {
         padding: 150px 0;
@@ -960,4 +964,4 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #fed136;
-}-
+}
