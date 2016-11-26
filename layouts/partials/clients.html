@@ -10,12 +10,13 @@
 
       {{ range .Site.Params.clients }}
         <div class="col-md-3 col-sm-6 col">
+          {{ $url := printf "img/logos/%s" .logo }}
           {{ if .link }}
             <a href="{{ .link }}">
-              <img src="img/logos/{{ .logo }}" class="img-responsive img-centered" alt="">
+              <img src="{{ $url | absURL }}" class="img-responsive img-centered" alt="">
             </a>
           {{ else }}
-            <img src="img/logos/{{ .logo }}" class="img-responsive img-centered" alt="">
+            <img src="{{ $url | absURL }}" class="img-responsive img-centered" alt="">
           {{ end }}
         </div>
       {{ end }}

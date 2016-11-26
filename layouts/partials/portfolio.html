@@ -17,7 +17,8 @@
                 <i class="fa fa-plus fa-3x"></i>
               </div>
             </div>
-            <img src="img/portfolio/{{ .preview }}" class="img-responsive" alt="">
+            {{ $url := printf "img/portfolio/%s" .preview }}
+            <img src="{{ $url | absURL }}" class="img-responsive" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>{{ .title | markdownify }}</h4>

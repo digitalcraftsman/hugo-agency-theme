@@ -1,14 +1,14 @@
 {{ "<!-- jQuery -->" | safeHTML }}
-<script src="{{ .Site.BaseURL }}js/jquery-v3.3.1/jquery.min.js"></script>
+<script src="{{ "js/jquery-v3.3.1/jquery.min.js"| absURL }}"></script>
 
 {{ "<!-- Bootstrap Core -->" | safeHTML }}
-<script src="{{ .Site.BaseURL }}js/bootstrap-v3.3.7/bootstrap.min.js"></script>
+<script src="{{ "js/bootstrap-v3.3.7/bootstrap.min.js"| absURL }}"></script>
 
 {{ "<!-- Form Validation -->" | safeHTML }}
-<script src="{{ .Site.BaseURL }}js/jquery.form-validator-v2.3.44/jquery.form-validator.min.js"></script>
+<script src="{{ "js/jquery.form-validator-v2.3.44/jquery.form-validator.min.js"| absURL }}"></script>
 
 {{ "<!-- Custom Theme -->" | safeHTML }}
-<script src="{{ .Site.BaseURL }}js/agency.js"></script>
+<script src="{{ "js/agency.js"| absURL }}"></script>
 
 {{ template "_internal/google_analytics_async.html" . }}
 

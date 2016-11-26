@@ -14,7 +14,8 @@
             <div class="modal-body">
               <h2>{{ .title  | markdownify }}</h2>
               <p class="item-intro text-muted">{{ .subtitle | markdownify }}</p>
-              <img class="img-responsive img-centered" src="img/portfolio/{{ .img }}" alt="">
+              {{ $url := printf "img/portfolio/%s" .img }}
+              <img class="img-responsive img-centered" src="{{ $url | absURL }}" alt="">
               <p>{{ .description | markdownify }}</p>
               <ul class="list-inline">
                 <li>{{ with $.Site.Params.portfolio.modal.date }}{{ . }}{{ end }}: {{ .date }}</li>

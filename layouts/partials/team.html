@@ -11,7 +11,8 @@
       {{ range .Site.Params.team.members }}
         <div class="col-sm-4 col">
           <div class="team-member">
-            <img src="img/team/{{ .img }}" class="img-responsive img-circle" alt="">
+            {{ $url := printf "img/team/%s" .img }}
+            <img src="{{ $url | absURL }}" class="img-responsive img-circle" alt="{{ .name }}">
             <h3>{{ .name | markdownify }}</h3>
 
             {{ with .position }}

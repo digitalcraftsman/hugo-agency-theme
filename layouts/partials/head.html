@@ -2,27 +2,27 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}">
-  <meta name="author" content="{{ with .Site.Params.name }}{{ . }}{{ end }}">
+  {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.name }}<meta name="author" content="{{ . }}">{{ end }}
   {{ .Hugo.Generator }}
-  <title>{{ .Site.Title }}</title>
+  <title>{{ .Title }}{{ if not .IsHome }} &middot; {{ .Site.Title }}{{ end }}</title>
   {{ "<!-- Stylesheets -->" | safeHTML }}
-  <link href="{{ .Site.BaseURL }}css/bootstrap-v3.3.7/bootstrap.min.css" rel="stylesheet">
-  <link href="{{ .Site.BaseURL }}css/agency.css" rel="stylesheet">
-  <link href="{{ .Site.BaseURL }}css/jquery.form-validator-v2.3.44/theme-default.min.css" rel="stylesheet">
+  <link href="{{ "css/bootstrap-v3.3.7/bootstrap.min.css" | absURL }}" rel="stylesheet">
+  <link href="{{ "css/agency.css" | absURL }}" rel="stylesheet">
+  <link href="{{ "css/jquery.form-validator-v2.3.44/theme-default.min.css" | absURL }}" rel="stylesheet">
 
   {{ range .Site.Params.custom_css }}
-    <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
+    <link rel="stylesheet" href="{{ . | absURL }}">
   {{ end }}
 
   {{ "<!-- Custom Fonts -->" | safeHTML }}
-  <link href="{{ .Site.BaseURL }}font-awesome-v4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="{{ "font-awesome-v4.7.0/css/font-awesome.min.css" | absURL }}" rel="stylesheet" type="text/css">
 
   {{ with not .Site.Params.disableFonts }}
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
   {{ end }}
 
   {{ with .Site.Params.favicon }}
