@@ -1,0 +1,48 @@
++++ 
+#disable = false
+weight = 20
+title = "Services"
+subtitle = "Lorem ipsum dolor sit amet consectetur."
+lastmod = "2016-11-22"
+date = "2016-11-22"
+
+[style]
+  center = true
+
+# Each services can also be stored as it's own data file.
+# Data files are located in 'data/index/services/services/'.
+# Assets such as images are stored in 'static/img/services/'.
+
+[[services]]
+  title = "Responsive Design"
+  weight = 20
+  lastmod = "2016-11-22"
+  date = "2016-11-22"
+  icon = "fa-laptop"
+  link = ""
+  content = """
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+  """
+
+[[services]]
+  title = "E-Commerce"
+  weight = 10
+  lastmod = "2016-11-22"
+  date = "2016-11-22"
+  icon = "fa-shopping-cart"
+  link = ""
+  content = """
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+  """
+
+[[services]]
+  title = "Web"
+  weight = 30
+  lastmod = "2016-11-22"
+  date = "2016-11-22"
+  icon = "fa-lock"
+  link = ""
+  content = """
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+  """
++++

@@ -252,11 +252,16 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fec503;
 }
 
+.navbar-default .lang {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
 @media(min-width:768px) {
     .navbar-default {
-        padding: 25px 0;
+        padding: 10px 0;
         border: 0;
-        background-color: transparent;
+        background-color: #222;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
@@ -359,6 +364,31 @@ section h3.section-subheading {
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
+}
+
+section#single h1 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 40px;
+    text-align: center;
+}
+
+section#single h2, h3, h4 {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+section#single h2 {
+    text-transform: none;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+section#single {
+    padding: 50px 0;
 }
 
 @media(min-width:768px) {
@@ -665,6 +695,10 @@ section h3.section-subheading {
   justify-content: center;
 }
 
+.team-top {
+    margin-bottom: 50px;
+}
+
 .team-member {
     margin-bottom: 50px;
     text-align: center;
@@ -960,4 +994,8 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #fed136;
-}-
+}
+
+.grecaptcha-badge {
+    display: none;
+}

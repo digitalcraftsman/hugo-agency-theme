@@ -16,7 +16,9 @@
   {{ end }}
 
   {{ "<!-- Custom Fonts -->" | safeHTML }}
-  <link href="{{ "font-awesome-v4.7.0/css/font-awesome.min.css" | absURL }}" rel="stylesheet" type="text/css">
+  {{ if not .Site.Params.custom_icons }}
+    <link href="{{ "font-awesome-v4.7.0/css/font-awesome.min.css" | absURL }}" rel="stylesheet" type="text/css">
+  {{ end }}
 
   {{ with not .Site.Params.disableFonts }}
     <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">

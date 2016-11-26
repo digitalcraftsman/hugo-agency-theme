@@ -1,0 +1,16 @@
++++
+#disable = true
+weight = 31
+title = "Portfolio"
+lastmod = "2016-11-22"
+date = "2016-11-22"
+
+button = "Close project"
+
+[style]
+  center = true
+
+# Each portfolio can also be stored as it's own data file.
+# Data files are located in 'data/index/portfolio/portfolio/'.
+# Assets such as images are stored in 'static/img/portfolio/'.
++++

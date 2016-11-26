@@ -1,0 +1,16 @@
++++ 
+#disable = false
+weight = 40
+title = "Zeitlinie"
+subtitle = "Lorem ipsum dolor sit amet consectetur."
+endpoint = "Sei ein Teil unserer Geschichte"
+lastmod = "2016-11-22"
+date = "2016-11-22"
+
+[style]
+  center = true
+
+# Each event/item can also be stored as it's own data file.
+# Data files are located in 'data/index/timeline/timeline/'.
+# Assets such as images are stored in 'static/img/timeline/'.
++++

@@ -1,0 +1,21 @@
++++ 
+#disable = false
+weight = 50
+title = "Super tolles Team"
+subtitle = "Ein noch besserer Untertitel."
+lastmod = "2016-11-22"
+date = "2016-11-22"
+
+[style]
+  center = true
+
+#  Additional explanations below the team members
+contentBottom = """
+Super tolle Erklärung in DE.
+"""
+
+# Each member can also be stored as it's own data file.
+# Data files are located in 'data/index/member/member/'.
+# Assets such as images are stored in 'static/img/member/'.
+# Image size should be at least 360px*360px or the alignment might be affected.
++++

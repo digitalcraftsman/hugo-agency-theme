@@ -1,0 +1,30 @@
+- id: team.livesIn
+  translation: "Lives in"
+- id: team.reportsTo
+  translation: "Reports to"
+- id: contact.defaultSuccess
+  translation: "Thank you for contacting us."
+- id: contact.defaultError
+  translation: "Message could not be send. Please contact us at"
+- id: contact.jsError
+  translation: "Message can not be send with javascript disabled. Please contact us at"
+- id: contact.valError
+  translation: "There was an error with your validation. Please contact us at"
+- id: contact.defaultButton
+  translation: "Send Message"
+- id: navigation.toggle
+  translation: "Toggle navigation"
+- id: modal.date
+  translation: "Date:"
+- id: modal.client
+  translation: "Client:"
+- id: modal.category
+  translation: "Category:"
+- id: 404.title
+  translation: "Page not found"
+- id: 404.subtitle
+  translation: "Requested page could not be found."
+- id: 404.description
+  translation: "You can always go back to our main page."
+- id: 404.button
+  translation: "Main page"

@@ -11,26 +11,17 @@
       <div class="container">
         <div class="404">
           <div class="intro-text">
-            <div class="intro-heading">Page not found</div>
-
-            {{ with .Site.Params.error404 }}
-            <div class="intro-lead-in">{{ .heading | markdownify }}</div>
-
-            <div class="intro-lead-in">{{ .text | markdownify }}</div>
-            {{ else }}
-            <div class="intro-lead-in">Requested page could not be found.</div>
-            <div class="intro-lead-in">You can always go back to our main <a href="{{ .Site.BaseURL }}">page</a>.</div>
-            {{ end }}
-
+            <div class="intro-heading">{{ i18n "404.title" }}</div>
+            <div class="intro-lead-in">{{ i18n "404.subtitle" }}</div>
+            <div class="intro-lead-in">{{ i18n "404.description" }}</div>
+            <a href="{{ .Site.BaseURL | relLangURL }}" class="page-scroll btn btn-xl">{{ i18n "404.button" }}</a>
           </div>
         </div>
       </div>
     </header>
-
     {{ if .Site.Params.footer.enable }}
       {{ partial "footer.html" . }}
     {{ end }}
-
     {{ partial "js.html" . }}
   </body>
 </html>

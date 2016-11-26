@@ -1,0 +1,52 @@
++++ 
+#disable = false
+weight = 40
+title = "Timeline"
+subtitle = "Lorem ipsum dolor sit amet consectetur."
+endpoint = "Be part<br>of our<br>story!"
+lastmod = "2016-11-22"
+date = "2016-11-22"
+
+[style]
+  center = true
+
+# Each event/item can also be stored as it's own data file.
+# Data files are located in 'data/index/timeline/timeline/'.
+# Assets such as images are stored in 'static/img/timeline/'.
+
+[[timeline]]
+  title = "Our Humble Beginnings"
+  weight = 10
+  img = "1.jpg"
+  time = "2009-2011"
+  content = """
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+  """
+
+[[timeline]]
+  title = "An Agency is Born"
+  weight = 20
+  img = "2.jpg"
+  time = "March 2011"
+  content = """
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+  """
+
+[[timeline]]
+  title = "Our Humble Beginnings"
+  weight = 30
+  img = "3.jpg"
+  time = "December 2012"
+  content = """
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+  """
+
+[[timeline]]
+  title = "Phase Two Expansion"
+  weight = 40
+  img = "4.jpg"
+  time = "July 2014"
+  content = """
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+  """
++++

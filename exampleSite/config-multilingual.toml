@@ -11,6 +11,14 @@ copyright = "Published under the Apache License 2.0."
 
 DefaultContentLanguage = "en"
 
+[languages.en]
+  weight = 1
+  title = "Example Page"
+[languages.de]
+  weight = 2
+  title = "Beispiel Seite"
+  copyright = "Veröffentlicht unter der Apache Lizenz 2.0."
+
 # Some general Theme information:
 #
 # Almost all fields are markdown enabled.
@@ -43,33 +51,58 @@ DefaultContentLanguage = "en"
     # Optional brand logo used in nav stored in 'static/img/'.
     #logo = "logo.svg"
 
-  [[menu.main]]
+  [[languages.en.menu.main]]
     url = "#services"
     name = "Services"
     weight = 10
 
-  [[menu.main]]
+  [[languages.en.menu.main]]
     url = "#contact"
     name = "Contact"
     weight = 30
 
-  [[menu.main]]
+  [[languages.en.menu.main]]
     url = "#team"
     name = "Team"
     weight = 20
 
-  [[menu.main]]
+  [[languages.en.menu.main]]
     url = "#timeline"
     name = "Timeline"
     weight = 10
 
   # Pre- and postpended custom links for main menu.
-  [[menu.prepend]]
+  [[languages.en.menu.prepend]]
     url = "http://gohugo.io"
     name = "Hugo"
     weight = 10
 
-  [[menu.postpend]]
+  [[languages.en.menu.postpend]]
+    url = "https://github.com/digitalcraftsman/hugo-agency-theme"
+    name = "Theme on GitHub"
+    weight = 20
+
+  [[languages.de.menu.main]]
+    url = "#services"
+    name = "Services"
+    weight = 10
+
+  [[languages.de.menu.main]]
+    url = "#contact"
+    name = "Kontakt"
+    weight = 30
+
+  [[languages.de.menu.main]]
+    url = "#team"
+    name = "Team"
+    weight = 20
+
+  [[languages.de.menu.main]]
+    url = "#timeline"
+    name = "Geschichte"
+    weight = 10
+
+  [[languages.de.menu.postpend]]
     url = "https://github.com/digitalcraftsman/hugo-agency-theme"
     name = "Theme auf GitHub"
     weight = 20
@@ -78,29 +111,45 @@ DefaultContentLanguage = "en"
   [params.footer]
     enable = true
 
-  [[menu.social]]
+  [[languages.en.menu.social]]
     weight = 10
     name = "twitter"
     pre = "<i class='fa fa-twitter'></i>"
     url = "#"
-  [[menu.social]]
+  [[languages.en.menu.social]]
     weight = 20
     name = "facebook"
     pre = "<i class='fa fa-facebook'></i>"
     url = "#"
-  [[menu.social]]
+  [[languages.en.menu.social]]
+    weight = 30
+    name = "linkedin"
+    pre = "<i class='fa fa-linkedin'></i>"
+    url = "#"
+
+  [[languages.de.menu.social]]
+    weight = 10
+    name = "twitter"
+    pre = "<i class='fa fa-twitter'></i>"
+    url = "#"
+  [[languages.de.menu.social]]
+    weight = 20
+    name = "facebook"
+    pre = "<i class='fa fa-facebook'></i>"
+    url = "#"
+  [[languages.de.menu.social]]
     weight = 30
     name = "linkedin"
     pre = "<i class='fa fa-linkedin'></i>"
     url = "#"
 
   # Custom footer menu items not defined within pages.
-  #[[menu.footer]]
+  #[[languages.en.menu.footer]]
   #  weight = 10
   #  name = "Privacy Policy"
   #  url = "#"
 
-  #[[menu.footer]]
+  #[[languages.de.menu.footer]]
   #  weight = 10
   #  name = "Privatsphäre"
   #  url = "#"

@@ -1,0 +1,83 @@
++++ 
+#disable = false
+weight = 50
+title = "Our amazing team"
+subtitle = "Lorem ipsum dolor sit amet consectetur."
+lastmod = "2016-11-22"
+date = "2016-11-22"
+
+[style]
+  center = true
+
+# Additional explanations above the team members
+contentTop = """
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
+"""
+
+# Additional explanations below the team members
+contentBottom = """
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
+"""
+
+# Each member can also be stored as it's own data file.
+# Data files are located in 'data/index/team/team/'.
+# Assets such as images are stored in 'static/img/team/'.
+# Image size should be at least 360px*360px or the alignment might be affected.
+
+[[team]]
+  title = "Diana Pertersen"
+  joined = "2018-01-01"
+  img = "3.jpg"
+  position = "Lead Developer"
+  [[social]]
+    icon = "fa-twitter"
+    link = "#"
+  [[social]]
+    icon = "fa-facebook"
+    link = "#"
+  [[social]]
+    icon = "fa-linkedin"
+    link = "#"
+
+[[team]]
+  title = "Kay Garland"
+  joined = "2015-01-01"
+  img = "1.jpg"
+  position = "Lead Designer"
+  reportsTo = "CTO"
+  livesIn = "[Munich, Germany](#some-maps-url)"
+  scope = [
+    "UX for [member dashboard](#)",
+    "Maintainer for [awesome-project](#)",
+    "Open Source [community management](#)"
+  ]
+  [[social]]
+    icon = "fa-twitter"
+    link = "#"
+  [[social]]
+    icon = "fa-facebook"
+    link = "#"
+  [[social]]
+    icon = "fa-linkedin"
+    link = "#"
+
+  content = """
+  Kay is an awesome Lead Designer with heaps of experience in the field of UX.  
+  She worked at Pied Piper for years until they went belly up.
+  """
+
+[[team]]
+  title = "Larry Parker"
+  joined = "2014-01-01"
+  img = "2.jpg"
+  position = "Lead Marketer"
+  [[social]]
+    icon = "fa-twitter"
+    link = "#"
+  [[social]]
+    icon = "fa-facebook"
+    link = "#"
+  [[social]]
+    icon = "fa-linkedin"
+    link = "#"
++++

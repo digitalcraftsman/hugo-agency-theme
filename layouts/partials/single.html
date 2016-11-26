@@ -1,0 +1,24 @@
+{{ "<!-- Single -->" | safeHTML }}
+<header>
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-heading">{{ with .Title }}{{ . | markdownify }}{{ end }}</div>
+      <div class="intro-lead-in">{{ with .Params.subtitle }}{{ . | markdownify }}{{ end }}</div>
+    </div>
+  </div>
+</header>
+<section id="single">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        {{ if .Params.style.center }}
+          <div class="row">
+            {{ .Content | markdownify }}
+          </div>
+        {{ else }}
+          {{ .Content | markdownify }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

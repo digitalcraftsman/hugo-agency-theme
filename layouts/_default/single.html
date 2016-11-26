@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+  {{ partial "head.html" . }}
+
+  <body id="page-top" class="single">
+    {{ partial "nav.html" . }}
+    {{ partial "single.html" . }}
+
+    {{ $.Scratch.Set "contact" .Params.elements.contact }}
+    {{ $.Scratch.Set "footer" .Params.elements.footer }}
+
+    {{ range sort (where .Site.Pages "Section" "home") }}
+
+      {{ if and (in .RelPermalink "/home/contact/") ($.Scratch.Get "contact") }}
+        {{ partial "contact.html" . }}
+      {{ end }}
+
+    {{ end }}
+
+    {{ if and .Site.Params.footer.enable ($.Scratch.Get "footer") }}
+      {{ partial "footer.html" . }}
+    {{ end }}
+
+    {{ partial "js.html" . }}
+  </body>
+</html>

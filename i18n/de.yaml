@@ -1,0 +1,30 @@
+- id: team.livesIn
+  translation: "Lebt in"
+- id: team.reportsTo
+  translation: "Berichtet an den"
+- id: contact.defaultSuccess
+  translation: "Vielen Dank für Ihre Nachricht."
+- id: contact.defaultError
+  translation: "Nachricht konnte nicht gesendet werden. Bitte kontaktieren Sie uns per Mail unter:"
+- id: contact.jsError
+  translation: "Nachricht kann ohne Javascript nicht versendet werden. Bitte kontaktieren Sie uns per mail unter:"
+- id: contact.valError
+  translation: "Es gab ein Problem mit der Anti-Spam Validierung. Bitte kontaktieren Sie uns per mail unter:"
+- id: contact.defaultButton
+  translation: "Nachricht senden"
+- id: navigation.toggle
+  translation: "Toggle Navigation"
+- id: modal.date
+  translation: "Datum:"
+- id: modal.client
+  translation: "Klient:"
+- id: modal.category
+  translation: "Kategorie:"
+- id: 404.title
+  translation: "Seite nicht gefunden"
+- id: 404.subtitle
+  translation: "Angefragt Seite konnte nicht gefunden werden."
+- id: 404.description
+  translation: "Sie können jederzeit auf die Startseite zurück."
+- id: 404.button
+  translation: "Startseite"

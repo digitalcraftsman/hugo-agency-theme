@@ -1,0 +1,15 @@
++++
+weight = 80
+# Optional title to describe relationship or emphasize something.
+#title = "Tolle Kunden"
+lastmod = "2016-11-22"
+date = "2016-11-22"
+
+[style]
+  center = true
+
+# Each clients can also be stored as it's own data file.
+# Data files are located in 'data/index/clients/clients/'.
+# Assets such as images are stored in 'static/img/clients/'.
+# Logo size of 280px*80px in .svg format is recommended.
++++

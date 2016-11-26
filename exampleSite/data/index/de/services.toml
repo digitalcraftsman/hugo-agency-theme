@@ -1,0 +1,15 @@
++++ 
+#disable = false
+weight = 20
+title = "Services (de)"
+subtitle = "Lorem ipsum dolor sit amet consectetur."
+lastmod = "2016-11-22"
+date = "2016-11-22"
+
+[style]
+  center = true
+
+# Each services can also be stored as it's own data file.
+# Data files are located in 'data/index/services/services/'.
+# Assets such as images are stored in 'static/img/services/'.
++++

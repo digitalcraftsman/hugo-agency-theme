@@ -1,17 +1,17 @@
 name = "Agency"
 license = "Apache License 2.0"
-licenselink = "//github.com/digitalcraftsman/hugo-agency-theme/blob/master/LICENSE"
+licenselink = "https://github.com/digitalcraftsman/hugo-agency-theme/blob/master/LICENSE"
 description = "A one page portfolio for companies and freelancers."
-homepage = "//github.com/digitalcraftsman/hugo-agency-theme"
+homepage = "https://github.com/digitalcraftsman/hugo-agency-theme"
 tags = ["portfolio", "company", "contact form", "timeline", "google analytics", "piwik"]
-min_version = 0.15
+min_version = 0.26
 
 [author]
   name = "digitalcraftsman"
-  homepage = "//github.com/digitalcraftsman"
+  homepage = "https://github.com/digitalcraftsman"
 
 # If porting an existing theme
 [original]
   name = "David Miller"
-  homepage = "//www.ironsummitmedia.com/"
-  repo = "//github.com/IronSummitMedia/startbootstrap-agency"
+  homepage = "http://www.ironsummitmedia.com/"
+  repo = "https://github.com/IronSummitMedia/startbootstrap-agency"

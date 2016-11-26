@@ -3,42 +3,82 @@
 
   {{ partial "head.html" . }}
 
-  <body id="page-top" class="index">
+  <body id="page-top" class="index" home=true>
     {{ partial "nav.html" . }}
-    {{ partial "hero.html" . }}
 
-    {{ if .Site.Params.services.enable }}
-      {{ partial "services.html" . }}
+    {{ with index $.Site.Data.index (string $.Site.Language) }}
+      {{ $.Scratch.Set "data" . }}
+
+      {{ with and (not .hero.disable) (.hero) }}
+        {{ partial "hero.html" $ }}
+      {{ end }}
+
+      {{ with and (not .services.disable) (.services) }}
+        {{ partial "services.html" $ }}
+      {{ end }}
+
+      {{ with and (not .portfolio.disable) (.portfolio) }}
+        {{ partial "portfolio.html" $ }}
+        {{ partial "modals.html" $ }}
+      {{ end }}
+
+      {{ with and (not .timeline.disable) (.timeline) }}
+        {{ partial "timeline.html" $ }}
+      {{ end }}
+
+      {{ with and (not .team.disable) (.team) }}
+        {{ partial "team.html" $ }}
+      {{ end }}
+
+      {{ with and (not .clients.disable) (.clients) }}
+        {{ partial "clients.html" $ }}
+      {{ end }}
+
+      {{ with and (not .contact.disable) (.contact) }}
+        {{ partial "contact.html" $ }}
+      {{ end }}
+
     {{ end }}
 
-    {{ if .Site.Params.portfolio.enable }}
-      {{ partial "portfolio.html" . }}
-    {{ end }}
+    {{ with and (not (index $.Site.Data.index (string $.Site.Language))) ($.Site.Data.index) }}
+      {{ $.Scratch.Set "data" . }}
 
-    {{ if .Site.Params.about.enable }}
-      {{ partial "about.html" . }}
-    {{ end }}
+      {{ with and (not .hero.disable) (.hero) }}
+        {{ partial "hero.html" $ }}
+      {{ end }}
 
-    {{ if .Site.Params.team.enable }}
-      {{ partial "team.html" . }}
-    {{ end }}
+      {{ with and (not .services.disable) (.services) }}
+        {{ partial "services.html" $ }}
+      {{ end }}
 
-    {{ if .Site.Params.clients_list.enable }}
-      {{ partial "clients.html" . }}
-    {{ end }}
+      {{ with and (not .portfolio.disable) (.portfolio) }}
+        {{ partial "portfolio.html" $ }}
+        {{ partial "modals.html" $ }}
+      {{ end }}
 
-    {{ if .Site.Params.contact.enable }}
-      {{ partial "contact.html" . }}
+      {{ with and (not .timeline.disable) (.timeline) }}
+        {{ partial "timeline.html" $ }}
+      {{ end }}
+
+      {{ with and (not .team.disable) (.team) }}
+        {{ partial "team.html" $ }}
+      {{ end }}
+
+      {{ with and (not .clients.disable) (.clients) }}
+        {{ partial "clients.html" $ }}
+      {{ end }}
+
+      {{ with and (not .contact.disable) (.contact) }}
+        {{ partial "contact.html" $ }}
+      {{ end }}
+
     {{ end }}
 
     {{ if .Site.Params.footer.enable }}
       {{ partial "footer.html" . }}
     {{ end }}
 
-    {{ if .Site.Params.portfolio.enable }}
-      {{ partial "modals.html" . }}
-    {{ end }}
-
     {{ partial "js.html" . }}
+
   </body>
 </html>
