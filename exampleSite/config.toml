@@ -23,6 +23,7 @@ googleAnalytics = ""
   # Link custom assets relative to /static
   custom_css = []
   custom_js  = []
+  favicon    = "favicon.ico"
 
   # Possibility to disable external/additional fonts
   # Exception: Fontawesome
@@ -181,7 +182,7 @@ googleAnalytics = ""
         "Open Source [community management](#)"
       ]
       # For bio markdown and even multiline strings are available.
-      bio = """Kay is an awesome Lead Designer with heaps of experience in the field of UX.  
+      bio = """Kay is an awesome Lead Designer with heaps of experience in the field of UX.
 She worked at Pied Piper for years until they went belly up."""
       social = [
         ["fa-twitter", "#"],
