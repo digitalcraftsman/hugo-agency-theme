@@ -3,55 +3,39 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading">{{ with .Site.Params.team.title }}{{ . | markdownify }}{{ end }}</h2>
-        <h3 class="section-subheading text-mutedwith ">{{ with .Site.Params.team.subtitle }}{{ . | markdownify }}{{ end }}</h3>
+        <h2 class="section-heading">
+          {{ with .Title }}{{ . }}{{ end }}
+        </h2>
+        <h3 class="section-subheading text-mutedwith ">
+          {{ with .Params.subtitle }}{{ . | markdownify }}{{ end }}
+        </h3>
       </div>
     </div>
-    <div class="row flexbox{{ if .Site.Params.team.center }} flexbox-center{{ end }}">
-      {{ range .Site.Params.team.members }}
-        <div class="col-sm-4 col">
-          <div class="team-member">
-            {{ $url := printf "img/team/%s" .img }}
-            <img src="{{ $url | absURL }}" class="img-responsive img-circle" alt="{{ .name }}">
-            <h3>{{ .name | markdownify }}</h3>
-
-            {{ with .position }}
-            <h4>{{ . | markdownify }}</h4>
-            {{ end }}
-            {{ with .reportsTo }}
-            <h5 class="report">Reports to {{ . | markdownify }}</h5>
-            {{ end }}
-
-            {{ with .livesIn }}
-            <h5>Lives in {{ . | markdownify }}</h5>
-            {{ end }}
-
-            {{ with .scope }}
-            <ul>
-              {{ range . }}
-                <li>{{ . | markdownify }}</li>
-              {{ end }}
-            </ul>
-            {{ end }}
-
-            <ul class="list-inline social-buttons">
-              {{ range .social }}
-                <li><a href="{{ index . 1 }}"><i class="fa {{ index . 0 }}"></i></a></li>
-              {{ end }}
-            </ul>
-
-            {{ with .bio }}
-            <p class="team-bio">{{ . | markdownify }}</p>
-            {{ end }}
-
-          </div>
+    {{ if eq .Params.style.description "top" }}
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center team-top">
+          <p class="large text-muted">
+            {{ with .Content }}{{ . }}{{ end }}
+          </p>
         </div>
+      </div>
+    {{ end }}
+    <div class="row flexbox{{ if .Params.style.center }} flexbox-center{{ end }}">
+      {{ range sort (where .Site.Pages "Section" "index") }}{{/*"joined" "asc"*/}}
+        {{ $perm := add $.Site.LanguagePrefix "/index/team/" }}
+        {{ if and (in .RelPermalink $perm) (ne .RelPermalink $perm) }}
+          {{ partial "members.html" . }}
+        {{ end }}
       {{ end }}
     </div>
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 text-center">
-        <p class="large text-muted">{{ with .Site.Params.team.description }}{{ . | markdownify }}{{ end }}</p>
+    {{ if ne .Params.style.description "top" }}
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+          <p class="large text-muted">
+            {{ with .Content }}{{ . }}{{ end }}
+          </p>
+        </div>
       </div>
-    </div>
+    {{ end }}
   </div>
 </section>

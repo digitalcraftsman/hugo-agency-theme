@@ -1,16 +1,18 @@
 // Smooth scrolling via animate()
 $(document).ready(function(){
-  $("a").on('click', function(event) {
-    if (this.hash && window.location.pathname == "/") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-        window.location.hash = hash;
-      });
-    }
-  });
+  if ($("body").attr("home")) {
+    $("a").on('click', function(event) {
+      if (this.hash) {
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+          window.location.hash = hash;
+        });
+      }
+    });
+  }
 });
 
 // Navigation change on scroll
@@ -46,6 +48,11 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
+// Contact form validation
+$.validate({
+  modules : 'html5, toggleDisabled'
+});
+
 // Async contact form
 $('form[id=contactForm]').submit(function(){
   $.post($(this).attr('action'), $(this).serialize(), function(res){
@@ -59,9 +66,4 @@ $('form[id=contactForm]').submit(function(){
     $('form[id=contactForm] #error').show();
   });
   return false;
-});
-
-// Contact form validation
-$.validate({
-  modules : 'html5, toggleDisabled'
 });

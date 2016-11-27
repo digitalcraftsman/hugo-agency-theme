@@ -1,8 +1,13 @@
 # Changelog
 
+### 1st December 2016 (breaking change!)
+- Single page layout
+- Migrate to separate files for content not config.toml
+- Multilingual enabled
+
 ### 11th November 2016
 - Center team members and improve variety alignment issues.
-- Add additional information options for team members.
+- Additional information options for team members.
 - Make services clickable via url attribute.
 - Possibility to substitute formspring.io for forms.
 - Enable removal of contact form fields.
@@ -10,7 +15,7 @@
 [Show me the diff](https://github.com/digitalcraftsman/hugo-agency-theme/compare/615f5242d0c2c20b2062545d48cf15125d9ca91d...f9c636485fd6c846d83e531eb4e5c0247eabf4a7)
 
 ### 22nd September 2016
-- Add Tracking via piwik as alternative to Google Analytics. 
+- Tracking via piwik as alternative to Google Analytics.
 - Ability to disable fonts for performance and privacy.
 
 [Show me the diff](https://github.com/digitalcraftsman/hugo-agency-theme/compare/bf89cf62acf794db3a387b39f8792df807ba1698...615f5242d0c2c20b2062545d48cf15125d9ca91d)

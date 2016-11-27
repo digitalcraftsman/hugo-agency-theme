@@ -3,24 +3,26 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <span class="copyright">{{ with .Site.Params.footer.copyright }}{{ . | markdownify }}{{ end }}</span>
+        <span class="copyright">
+          {{ with .Site.Copyright }}{{ . | markdownify }}{{ end }}
+        </span>
       </div>
       <div class="col-md-4">
         <ul class="list-inline social-buttons">
-
-          {{ range .Site.Params.footer.social }}
-            <li><a href="{{ .link }}"><i class="fa {{ .icon }}"></i></a></li>
+          {{ range .Site.Menus.social }}
+            <li>
+              <a href="{{ .URL | relLangURL }}">{{ .Pre }}</a>
+            </li>
           {{ end }}
-
         </ul>
       </div>
       <div class="col-md-4">
         <ul class="list-inline quicklinks">
-
-          {{ range .Site.Params.footer.quicklinks }}
-            <li><a href="{{ .link }}">{{ .text  | markdownify }}</a></li>
+          {{ range .Site.Menus.footer }}
+            <li>
+              <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+            </li>
           {{ end }}
-
         </ul>
       </div>
     </div>

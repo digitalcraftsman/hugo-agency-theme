@@ -3,80 +3,73 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-
-        {{ with .Site.Params.contact.title }}
-        <h2 class="section-heading">{{ . | markdownify }}</h2>
+        {{ with .Title }}
+          <h2 class="section-heading">{{ . | markdownify }}</h2>
         {{ end }}
-
-        {{ with .Site.Params.contact.subtitle }}
-        <h3 class="section-subheading text-muted">{{ . | markdownify }}</h3>
+        {{ with .Params.subtitle }}
+          <h3 class="section-subheading text-muted">{{ . | markdownify }}</h3>
         {{ end }}
-
       </div>
     </div>
     <div class="row">
       <div class="col-lg-12">
-        {{ if not .Site.Params.contact.postURL }}
-        <form  action="//formspree.io/{{ with (or .Site.Params.contact.email .Site.Params.email)}}{{.}}{{ end }}" method="POST" name="sentMessage" id="contactForm">
+        {{ if not .Params.postURL }}
+          <form  action="//formspree.io/{{ with (or .Site.Params.contact.email .Params.email) }}{{ . }}{{ end }}" method="POST" name="sentMessage" id="contactForm">
         {{ else }}
-        <form  action="{{ .Site.Params.contact.postURL }}" method="POST" name="sentMessage" id="contactForm">
+          <form  action="{{ .Params.postURL }}" method="POST" name="sentMessage" id="contactForm">
         {{ end }}
-
-          <fieldset>
             <div class="row">
               <div class="col-md-6">
-
-                {{ with .Site.Params.contact.form.name }}
-                <div class="form-group">
-                  <input class="form-control" id="name" required="required" type="text" name="name" placeholder="{{ with .text }}{{ .  | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}">
-                  <p class="help-block text-danger"></p>
-                </div>
+                {{ with .Params.fields.name }}
+                  <div class="form-group">
+                    <input class="form-control" id="name" required="required" type="text" name="name" placeholder="{{ with .text }}{{ . | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}">
+                    <p class="help-block text-danger"></p>
+                  </div>
                 {{ end }}
-
-                {{ with .Site.Params.contact.form.email }}
-                <div class="form-group">
-                  <input class="form-control" id="email" required="required" type="email" name="email" placeholder="{{ with .text }}{{ . | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}">
-                  <p class="help-block text-danger"></p>
-                </div>
+                {{ with .Params.fields.email }}
+                  <div class="form-group">
+                    <input class="form-control" id="email" required="required" type="email" name="email" placeholder="{{ with .text }}{{ . | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}">
+                    <p class="help-block text-danger"></p>
+                  </div>
                 {{ end }}
-
-                {{ with .Site.Params.contact.form.phone }}
-                <div class="form-group">
-                  <input class="form-control" id="phone" required="required" type="number" name="phone" placeholder="{{ with .text }}{{ . | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}"></textarea>
-                  <p class="help-block text-danger"></p>
-                </div>
+                {{ with .Params.fields.phone }}
+                  <div class="form-group">
+                    <input class="form-control" id="phone" required="required" type="text" name="phone" placeholder="{{ with .text }}{{ . | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}">
+                    <p class="help-block text-danger"></p>
+                  </div>
                 {{ end }}
               </div>
-
               <div class="col-md-6">
-              {{ with .Site.Params.contact.form.message }}
-                <div class="form-group">
-                  <textarea class="form-control" id="message" required="required" name="message" placeholder="{{ with .text }}{{ . | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}"></textarea>
-                  <p class="help-block text-danger"></p>
-                </div>
+                {{ with .Params.fields.message }}
+                  <div class="form-group">
+                    <textarea class="form-control" id="message" required="required" name="message" placeholder="{{ with .text }}{{ . | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}"></textarea>
+                    <p class="help-block text-danger"></p>
+                  </div>
                 {{ end }}
 
               </div>
               <div class="clearfix"></div>
               <div class="col-lg-12 text-center">
                 <div class="text-success" id="success" style="display:none;">
-                  {{ with .Site.Params.contact.thanks }}
+                  {{ with .Params.message.success }}
                     {{ . | markdownify }}
                   {{ else }}
-                    Thank you for contacting us.
+                    {{ i18n "contact.defaultSuccess" }}
                   {{ end }}
                 </div>
                 <div class="text-danger" id="error" style="display:none;">
-                  {{ with .Site.Params.contact.error }}
+                  {{ with .Params.message.error }}
                     {{ . | markdownify }}
                   {{ else }}
-                    Message could not be send. Please contact us at {{ (or .Site.Params.contact.email .Site.Params.email) }} instead.
+                    {{ i18n "contact.defaultError" }} {{ (or .Site.Params.contact.email .Params.email) }}
                   {{ end }}
                 </div><br />
-                <button type="submit" value="Submit" class="btn btn-xl">{{ with .Site.Params.contact.buttonText }}{{ . }}{{ end }}</button>
+                <button type="submit" value="Submit" class="btn btn-xl">
+                  {{ with .Params.button }}{{ . }}{{ end }}
+                </button>
               </div>
             </div>
-            {{ range .Site.Params.contact.form.hidden }}
+            {{ range .Params.fields.hidden }}
               {{ if eq .name "site" }}
                 <input type="hidden" name="{{ .name }}" value="{{ $.Permalink }}"/>
               {{ else if eq .name "page" }}
@@ -85,7 +78,6 @@
                 <input type="hidden" name="{{ .name }}" value="{{ .value }}"/>
               {{ end }}
             {{ end }}
-          </fieldset>
         </form>
       </div>
     </div>

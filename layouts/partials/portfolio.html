@@ -3,30 +3,31 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading">{{ with .Site.Params.portfolio.title }}{{ . | markdownify }}{{ end }}</h2>
-        <h3 class="section-subheading text-muted">{{ with .Site.Params.portfolio.subtitle }}{{ . | markdownify }}{{ end }}</h3>
+        <h2 class="section-heading">{{ with .Title }}{{ . | markdownify }}{{ end }}</h2>
+        <h3 class="section-subheading text-muted">{{ with .Params.subtitle }}{{ . | markdownify }}{{ end }}</h3>
       </div>
     </div>
-    <div class="row">
-
-      {{ range .Site.Data.projects }}
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a href="#portfolioModal{{ .modalID }}" class="portfolio-link" data-toggle="modal">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
+    <div class="row flexbox{{ if .Params.style.center }} flexbox-center{{ end }} text-center">
+      {{ range sort (where .Site.Pages "Section" "index") }}
+        {{ $perm := add $.Site.LanguagePrefix "/index/portfolio/" }}
+        {{ if and (in .RelPermalink $perm) (ne .RelPermalink $perm) }}
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            {{ $url := printf "img/portfolio/%s" .Params.preview }}
+            <a href="#portfolioModal{{ .Params.ID }}" data-target="#portfolioModal{{ .Params.ID }}" class="portfolio-link" data-toggle="modal">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
               </div>
+              <img src="{{ $url | absURL }}" class="img-responsive" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>{{ .Title }}</h4>
+              <p class="text-muted">{{ .Params.category | markdownify }}</p>
             </div>
-            {{ $url := printf "img/portfolio/%s" .preview }}
-            <img src="{{ $url | absURL }}" class="img-responsive" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>{{ .title | markdownify }}</h4>
-            <p class="text-muted">{{ .category | markdownify }}</p>
           </div>
-        </div>
+        {{ end }}
       {{ end }}
-
     </div>
   </div>
 </section>

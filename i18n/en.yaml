@@ -1,0 +1,18 @@
+- id: team.livesIn
+  translation: "Lives in"
+- id: team.reportsTo
+  translation: "Reports to"
+- id: contact.defaultSuccess
+  translation: "Thank you for contacting us."
+- id: contact.defaultError
+  translation: "Message could not be send. Please contact us at"
+- id: navigation.toggle
+  translation: "Toggle navigation"
+- id: 404.title
+  translation: "Page not found"
+- id: 404.subtitle
+  translation: "Requested page could not be found."
+- id: 404.description
+  translation: "You can always go back to our main page."
+- id: 404.button
+  translation: "Main page"

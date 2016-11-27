@@ -1,0 +1,18 @@
+- id: team.livesIn
+  translation: "Lebt in"
+- id: team.reportsTo
+  translation: "Berichtet an den"
+- id: contact.defaultSuccess
+  translation: "Vielen Dank für Ihre Nachricht."
+- id: contact.defaultError
+  translation: "Nachricht konnte nicht gesendet werden.Butte kontaktieren sie uns per Mail unter:"
+- id: navigation.toggle
+  translation: "Toggle Navigation"
+- id: 404.title
+  translation: "Seite nicht gefunden"
+- id: 404.subtitle
+  translation: "Angefragt Seite konnte nicht gefunden werden."
+- id: 404.description
+  translation: "Sie können immer auf unsere Startseite zurück."
+- id: 404.button
+  translation: "Startseite"

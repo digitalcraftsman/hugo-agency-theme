@@ -9,16 +9,12 @@
 </header>
 <section id="single">
   <div class="container">
-    {{ if .Params.center }}
+    {{ if .Params.style.center }}
       <div class="row text-center">
-        {{ with .Content }}{{ . | markdownify }}{{ end }}
+        {{ .Content }}
       </div>
     {{ else }}
-      {{ with .Content }}{{ . | markdownify }}{{ end }}
+      {{ .Content }}
     {{ end }}
   </div>
 </section>
-
-{{ if .Params.contactenable }}
-  {{ partial "contact.html" . }}
-{{ end }}
