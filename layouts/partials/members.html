@@ -1,0 +1,30 @@
+<div class="col-sm-4 col">
+  <div class="team-member">
+    <img src="/img/team/{{ .Params.img }}" class="img-responsive img-circle" alt="">
+    <h3>{{ .Title }}</h3>
+    {{ with .Params.position }}
+      <h4>{{ . | markdownify }}</h4>
+    {{ end }}
+    {{ with .Params.reportsTo }}
+      <h5 class="report">{{ i18n "team.reportsTo" }} {{ . | markdownify }}</h5>
+    {{ end }}
+    {{ with .Params.livesIn }}
+      <h5>{{ i18n "team.livesIn" }} {{ . | markdownify }}</h5>
+    {{ end }}
+    {{ with .Params.scope }}
+    <ul>
+      {{ range . }}
+        <li>{{ . | markdownify }}</li>
+      {{ end }}
+    </ul>
+    {{ end }}
+    <ul class="list-inline social-buttons">
+      {{ range .Params.social }}
+        <li><a href="{{ .link }}"><i class="fa {{ .icon }}"></i></a></li>
+      {{ end }}
+    </ul>
+    {{ with .Content }}
+    <p class="team-bio">{{ . }}</p>
+    {{ end }}
+  </div>
+</div>

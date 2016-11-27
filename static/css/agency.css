@@ -669,6 +669,10 @@ section#single {
   justify-content: center;
 }
 
+.team-top {
+    margin-bottom: 50px;
+}
+
 .team-member {
     margin-bottom: 50px;
     text-align: center;

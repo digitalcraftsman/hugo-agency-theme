@@ -1,32 +1,39 @@
 {{ "<!-- Portfolio Modals -->" | safeHTML }}
-{{ range .Site.Data.projects }}
-  <div class="portfolio-modal modal fade" id="portfolioModal{{ .modalID }}" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
+{{ range sort (where .Site.Pages "Section" "index") }}
+  {{ $perm := add $.Site.LanguagePrefix "/index/portfolio/" }}
+  {{ if and (in .RelPermalink $perm) (ne .RelPermalink $perm) }}
+    <div class="portfolio-modal modal fade" id="portfolioModal{{ .Params.ID }}" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>{{ .title  | markdownify }}</h2>
-              <p class="item-intro text-muted">{{ .subtitle | markdownify }}</p>
-              {{ $url := printf "img/portfolio/%s" .img }}
-              <img class="img-responsive img-centered" src="{{ $url | absURL }}" alt="">
-              <p>{{ .description | markdownify }}</p>
-              <ul class="list-inline">
-                <li>{{ with $.Site.Params.portfolio.modal.date }}{{ . }}{{ end }}: {{ .date }}</li>
-                <li>{{ with $.Site.Params.portfolio.modal.client }}{{ . | markdownify }}{{ end }}: <a href="{{ .clientLink }}">{{ .client }}</a></li>
-                <li>{{ with $.Site.Params.portfolio.modal.category }}{{ . }}{{ end }}: {{ .category  | markdownify }}</li>
-              </ul>
-              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> {{ with $.Site.Params.portfolio.modal.buttonText }}{{ . }}{{ end }}</button>
+          <div class="col-lg-6">
+            {{ $url := printf "img/portfolio/%s" .Params.img }}
+            <div class="modal-content">
+              <div class="modal-body">
+                <h2>{{ .Title }}</h2>
+                <p class="item-intro text-muted">{{ .Params.subtitle | markdownify }}</p>
+                <img class="img-responsive img-centered" src="{{ $url | absURL }}" alt="">
+                <p>{{ .Content }}</p>
+                <ul class="list-inline">
+                  {{ if .Date }}
+                    <li>Date: {{ .Date.Format $.Site.Params.dateFormat }}</li>
+                  {{ end }}
+                  {{ if .Params.client }}
+                    <li>Client: <a href="{{ .Params.clientLink }}">{{ .Params.client }}</a></li>
+                  {{ end }}
+                  {{ with .Params.category }}
+                    <li>Category: {{ . }}</li>
+                  {{ end }}
+                </ul>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                  <i class="fa fa-times"></i> {{ with .Params.button }}{{ . }}{{ end }}
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  {{ end }}
 {{ end }}

@@ -3,15 +3,22 @@
 
   {{ partial "head.html" . }}
 
-  <body id="page-top" class="index">
+  <body id="page-top" class="single">
     {{ partial "nav.html" . }}
     {{ partial "single.html" . }}
 
-    {{ if .Params.partial.contact }}
-      {{ partial "contact.html" . }}
+    {{ $.Scratch.Set "contact" .Params.elements.contact }}
+    {{ $.Scratch.Set "footer" .Params.elements.footer }}
+
+    {{ range sort (where .Site.Pages "Section" "home") }}
+
+      {{ if and (in .RelPermalink "/home/contact/") ($.Scratch.Get "contact") }}
+        {{ partial "contact.html" . }}
+      {{ end }}
+
     {{ end }}
 
-    {{ if .Params.partial.footer }}
+    {{ if and .Site.Params.footer.enable ($.Scratch.Get "footer") }}
       {{ partial "footer.html" . }}
     {{ end }}
 

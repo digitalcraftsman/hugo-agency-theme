@@ -5,18 +5,18 @@
     {{ "<!-- Brand and toggle get grouped for better mobile display -->" | safeHTML }}
     <div class="navbar-header page-scroll">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">{{ i18n "navigation.toggle" }}</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
       {{ if .Site.Params.navigation.logo }}
-        <a class="navbar-brand page-scroll" href="{{ if .IsHome }}/#page-top{{ else }}{{ .Site.BaseURL }}{{ end }}">
+        <a class="navbar-brand page-scroll" href="{{ "#page-top" | relLangURL }}">
           {{ $url := printf "img/%s" .Site.Params.navigation.logo }}
           <img src="{{ $url | absURL }}" class="img-responsive" alt="{{ .Site.Params.navigation.brand }}">
         </a>
       {{ else }}
-        <a class="navbar-brand page-scroll" href="{{ if .IsHome }}/#page-top{{ else }}{{ .Site.BaseURL }}{{ end }}">
+        <a class="navbar-brand page-scroll" href="{{ "#page-top" | relLangURL }}">
           {{ .Site.Params.navigation.brand }}
         </a>
       {{ end }}
@@ -26,48 +26,22 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li class="hidden">
-          <a href="{{ if .IsHome }}/#page-top{{ else }}{{ .Site.BaseURL }}{{ end }}"></a>
+          <a href="{{ "#page-top" | relLangURL }}"></a>
         </li>
-
         {{ range .Site.Menus.prepend }}
           <li>
-            <a href="{{ .URL }}">{{ .Name | markdownify }}</a>
+            <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           </li>
         {{ end }}
 
-        {{ if .Site.Params.services.enable }}
+        {{ range .Site.Menus.main }}
           <li>
-            <a class="page-scroll" href="{{ .Site.BaseURL }}#services">{{ with .Site.Params.navigation.services }}{{ . }}{{ end }}</a>
+            <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           </li>
         {{ end }}
-
-        {{ if .Site.Params.portfolio.enable }}
-          <li>
-            <a class="page-scroll" href="{{ .Site.BaseURL }}#portfolio">{{ with .Site.Params.navigation.portfolio }}{{ . }}{{ end }}</a>
-          </li>
-        {{ end }}
-
-        {{ if .Site.Params.about.enable }}
-          <li>
-            <a class="page-scroll" href="{{ .Site.BaseURL }}#about">{{ with .Site.Params.navigation.about }}{{ . }}{{ end }}</a>
-          </li>
-        {{ end }}
-
-        {{ if .Site.Params.team.enable }}
-          <li>
-            <a class="page-scroll" href="{{ .Site.BaseURL }}#team">{{ with .Site.Params.navigation.team }}{{ . }}{{ end }}</a>
-          </li>
-        {{ end }}
-
-        {{ if .Site.Params.contact.enable }}
-          <li>
-            <a class="page-scroll" href="{{ .Site.BaseURL }}#contact">{{ with .Site.Params.navigation.contact }}{{ . }}{{ end }}</a>
-          </li>
-        {{ end }}
-
         {{ range .Site.Menus.postpend }}
           <li>
-            <a href="{{ .URL }}">{{ .Name }}</a>
+            <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           </li>
         {{ end }}
       </ul>
