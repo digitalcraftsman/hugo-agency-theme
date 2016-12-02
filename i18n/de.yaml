@@ -5,7 +5,7 @@
 - id: contact.defaultSuccess
   translation: "Vielen Dank für Ihre Nachricht."
 - id: contact.defaultError
-  translation: "Nachricht konnte nicht gesendet werden.Butte kontaktieren sie uns per Mail unter:"
+  translation: "Nachricht konnte nicht gesendet werden. Bitte kontaktieren Sie uns per Mail unter:"
 - id: navigation.toggle
   translation: "Toggle Navigation"
 - id: 404.title
@@ -13,6 +13,6 @@
 - id: 404.subtitle
   translation: "Angefragt Seite konnte nicht gefunden werden."
 - id: 404.description
-  translation: "Sie können immer auf unsere Startseite zurück."
+  translation: "Sie können jederzeit auf die Startseite zurück."
 - id: 404.button
   translation: "Startseite"

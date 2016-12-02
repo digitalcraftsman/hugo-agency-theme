@@ -53,13 +53,13 @@ DefaultContentLanguage = "en"
     weight = 10
 
   [[languages.en.menu.postpend]]
-    url = "http://gohugo.io"
-    name = "External link"
+    url = "https://github.com/digitalcraftsman/hugo-agency-theme"
+    name = "Theme on GitHub"
     weight = 20
 
   [[languages.de.menu.postpend]]
-    url = "http://gohugo.io"
-    name = "Externer Link"
+    url = "https://github.com/digitalcraftsman/hugo-agency-theme"
+    name = "Theme auf GitHub"
     weight = 20
 
   # Footer

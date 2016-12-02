@@ -1,5 +1,5 @@
 +++
-title = "Legales"
+title = "Rechtliches"
 lastmod = "2016-11-22"
 date = "2016-11-22"
 
@@ -8,11 +8,11 @@ date = "2016-11-22"
   contact = true
 
 [menu.main]
-  name = "Legales"
+  name = "Rechtliches"
   weight = 200
 
 [menu.footer]
-  name = "Legales"
+  name = "Rechtliches"
   weight = 30
 
 [style]

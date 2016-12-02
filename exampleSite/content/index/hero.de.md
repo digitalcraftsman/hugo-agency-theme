@@ -1,7 +1,7 @@
 +++
 weight = 10
-title = "Hallo"
-subtitle = "Toll dich zu sehen"
+title = "Herzlich willkommen"
+subtitle = "Schön Sie zu sehen"
 button = "Unsere Services"
 lastmod = "2016-11-22"
 date = "2016-11-22"
