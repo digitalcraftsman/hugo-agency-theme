@@ -16,13 +16,13 @@
                 <p>{{ .Content }}</p>
                 <ul class="list-inline">
                   {{ if .Date }}
-                    <li>Date: {{ .Date.Format $.Site.Params.dateFormat }}</li>
+                    <li>{{ i18n "modal.date" }} {{ .Date.Format $.Site.Params.dateFormat }}</li>
                   {{ end }}
                   {{ if .Params.client }}
-                    <li>Client: <a href="{{ .Params.clientLink }}">{{ .Params.client }}</a></li>
+                    <li>{{ i18n "modal.client" }} <a href="{{ .Params.clientLink }}">{{ .Params.client }}</a></li>
                   {{ end }}
                   {{ with .Params.category }}
-                    <li>Category: {{ . }}</li>
+                    <li>{{ i18n "modal.category" }} {{ . }}</li>
                   {{ end }}
                 </ul>
                 <button type="button" class="btn btn-primary" data-dismiss="modal">

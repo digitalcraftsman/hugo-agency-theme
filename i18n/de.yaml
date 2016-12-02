@@ -8,6 +8,12 @@
   translation: "Nachricht konnte nicht gesendet werden. Bitte kontaktieren Sie uns per Mail unter:"
 - id: navigation.toggle
   translation: "Toggle Navigation"
+- id: modal.date
+  translation: "Datum:"
+- id: modal.client
+  translation: "Klient:"
+- id: modal.category
+  translation: "Kategorie:"
 - id: 404.title
   translation: "Seite nicht gefunden"
 - id: 404.subtitle

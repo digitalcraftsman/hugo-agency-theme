@@ -8,6 +8,12 @@
   translation: "Message could not be send. Please contact us at"
 - id: navigation.toggle
   translation: "Toggle navigation"
+- id: modal.date
+  translation: "Date:"
+- id: modal.client
+  translation: "Client:"
+- id: modal.category
+  translation: "Category:"
 - id: 404.title
   translation: "Page not found"
 - id: 404.subtitle
