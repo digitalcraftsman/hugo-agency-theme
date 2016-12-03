@@ -3,6 +3,7 @@ baseurl = "https://example.org/"
 languageCode = "en-us"
 title = "Agency"
 theme = "hugo-agency-theme"
+themesDir = "../.."
 copyright = "Published under the Apache License 2.0."
 
 # Enable Google Analytics by providing your tracking code.
