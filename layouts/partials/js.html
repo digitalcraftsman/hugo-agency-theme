@@ -1,21 +1,22 @@
 {{ "<!-- jQuery -->" | safeHTML }}
-<script src="{{ .Site.BaseURL }}js/jquery-v3.3.1/jquery.min.js"></script>
+<script src="{{ "js/jquery-v3.3.1/jquery.min.js"| absURL }}"></script>
 
 {{ "<!-- Bootstrap Core JavaScript -->" | safeHTML }}
-<script src="{{ .Site.BaseURL }}js/bootstrap-v3.3.7/bootstrap.min.js"></script>
+<script src="{{ "js/bootstrap-v3.3.7/bootstrap.min.js"| absURL }}"></script>
 
 {{ "<!-- Plugin JavaScript -->" | safeHTML }}
-<script src="{{ .Site.BaseURL }}js/classie-v1.0.1.js"></script>
-<script src="{{ .Site.BaseURL }}js/cbpAnimatedHeader-v1.0.0.min.js"></script>
+<script src="{{ "js/classie-v1.0.1.js"| absURL }}"></script>
+<script src="{{ "js/cbpAnimatedHeader-v1.0.0.min.js"| absURL }}"></script>
 
 {{ if .Site.Params.contact.enable }}
   {{ "<!-- Contact Form JavaScript -->" | safeHTML }}
-  <script src="{{ .Site.BaseURL }}js/jqBootstrapValidation-v1.3.6-dirty.js"></script>
-  <script src="{{ .Site.BaseURL }}js/contact_me.js"></script>
+  <script src="{{ "js/jqBootstrapValidation-v1.3.6-dirty.js"| absURL }}"></script>
+  <script src="{{ "js/contact_me.js"| absURL }}"></script>
+  <script src="{{ "js/contact_async.js"| absURL }}"></script>
 {{ end }}
 
 {{ "<!-- Custom Theme JavaScript -->" | safeHTML }}
-<script src="{{ .Site.BaseURL }}js/agency.js"></script>
+<script src="{{ "js/agency.js"| absURL }}"></script>
 
 {{ template "_internal/google_analytics_async.html" . }}
 
