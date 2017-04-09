@@ -4,8 +4,10 @@
 {{ "<!-- Bootstrap Core -->" | safeHTML }}
 <script src="{{ "js/bootstrap-v3.3.7/bootstrap.min.js" | absURL }}"></script>
 
-{{ "<!-- Form Validation -->" | safeHTML }}
-<script src="{{ "js/jquery.form-validator-v2.3.44/jquery.form-validator.min.js" | absURL }}"></script>
+{{ if .Site.Params.contact.enable }}
+  {{ "<!-- Form Validation -->" | safeHTML }}
+  <script src="{{ "js/jquery.form-validator-v2.3.44/jquery.form-validator.min.js" | absURL }}"></script>
+{{ end }}
 
 {{ "<!-- Custom Theme -->" | safeHTML }}
 <script src="{{ "js/agency.js" | absURL }}"></script>
