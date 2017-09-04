@@ -14,9 +14,6 @@ date = "2016-11-22"
 [menu.footer]
   name = "Rechtliches"
   weight = 30
-
-[style]
-  center = true
 +++
 
 # Punkt A

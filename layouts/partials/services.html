@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="row flexbox{{ if $data.style.center }} flexbox-center{{ end }} text-center">
-      {{ range $data.services }}
+      {{ range sort $data.services "weight"}}
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
@@ -21,12 +21,12 @@
           </span>
           <h4 class="service-heading">
             {{ if .link }}
-              <a href="{{ .link | relLangURL }}">{{ .title }}</a>
+              <a href="{{ .link | relLangURL }}">{{ .title | markdownify }}</a>
             {{ else }}
-              {{ .title }}
+              {{ .title | markdownify }}
             {{ end }}
           </h4>
-          <p class="text-muted">{{ .content }}</p>
+          <p class="text-muted">{{ .content  | markdownify}}</p>
         </div>
       {{ end }}
     </div>

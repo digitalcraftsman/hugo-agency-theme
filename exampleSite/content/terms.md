@@ -14,9 +14,6 @@ date = "2016-11-22"
 [menu.footer]
   name = "Terms of Service"
   weight = 30
-
-[style]
-  center = true
 +++
 
 # Point A
