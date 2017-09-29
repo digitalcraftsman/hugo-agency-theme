@@ -52,29 +52,29 @@ DefaultContentLanguage = "en"
     #logo = "logo.svg"
 
   [[languages.en.menu.main]]
-    url = "#services"
+    url = "/#services"
     name = "Services"
     weight = 10
 
   [[languages.en.menu.main]]
-    url = "#contact"
+    url = "/#contact"
     name = "Contact"
     weight = 30
 
   [[languages.en.menu.main]]
-    url = "#team"
+    url = "/#team"
     name = "Team"
     weight = 20
 
   [[languages.en.menu.main]]
-    url = "#timeline"
+    url = "/#timeline"
     name = "Timeline"
     weight = 10
 
   # Pre- and postpended custom links for main menu.
   [[languages.en.menu.prepend]]
-    url = "http://gohugo.io"
-    name = "Hugo"
+    url = "/"
+    name = "Home"
     weight = 10
 
   [[languages.en.menu.postpend]]
@@ -82,23 +82,28 @@ DefaultContentLanguage = "en"
     name = "Theme on GitHub"
     weight = 20
 
+  [[languages.de.menu.prepend]]
+    url = "/"
+    name = "Startseite"
+    weight = 10
+
   [[languages.de.menu.main]]
-    url = "#services"
+    url = "/#services"
     name = "Services"
     weight = 10
 
   [[languages.de.menu.main]]
-    url = "#contact"
+    url = "/#contact"
     name = "Kontakt"
     weight = 30
 
   [[languages.de.menu.main]]
-    url = "#team"
+    url = "/#team"
     name = "Team"
     weight = 20
 
   [[languages.de.menu.main]]
-    url = "#timeline"
+    url = "/#timeline"
     name = "Geschichte"
     weight = 10
 

@@ -44,29 +44,29 @@ DefaultContentLanguage = "en"
     #logo = "logo.svg"
 
   [[menu.main]]
-    url = "#services"
+    url = "/#services"
     name = "Services"
     weight = 10
 
   [[menu.main]]
-    url = "#contact"
+    url = "/#contact"
     name = "Contact"
     weight = 30
 
   [[menu.main]]
-    url = "#team"
+    url = "/#team"
     name = "Team"
     weight = 20
 
   [[menu.main]]
-    url = "#timeline"
+    url = "/#timeline"
     name = "Timeline"
     weight = 10
 
   # Pre- and postpended custom links for main menu.
   [[menu.prepend]]
-    url = "http://gohugo.io"
-    name = "Hugo"
+    url = "/"
+    name = "Home"
     weight = 10
 
   [[menu.postpend]]
