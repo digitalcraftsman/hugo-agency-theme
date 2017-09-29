@@ -1,6 +1,6 @@
 <div class="col-sm-4 col">
   <div class="team-member">
-    <img src="/img/team/{{ .img }}" class="img-responsive img-circle" alt="">
+    <img src="{{ printf "/img/team/%s" .img | absURL }}" class="img-responsive img-circle">
     <h3>{{ .title }}</h3>
     {{ with .position }}
       <h4>{{ . | markdownify }}</h4>
