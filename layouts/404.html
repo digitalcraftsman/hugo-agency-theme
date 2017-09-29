@@ -1,27 +1,15 @@
-<!DOCTYPE html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
-
-  {{ partial "head.html" . }}
-
-  <body id="page-top" class="index">
-    {{ partial "nav.html" . }}
-
-    {{ "<!-- 404 -->" | safeHTML }}
-    <header>
-      <div class="container">
-        <div class="404">
-          <div class="intro-text">
-            <div class="intro-heading">{{ i18n "404.title" }}</div>
-            <div class="intro-lead-in">{{ i18n "404.subtitle" }}</div>
-            <div class="intro-lead-in">{{ i18n "404.description" }}</div>
-            <a href="{{ .Site.BaseURL | relLangURL }}" class="page-scroll btn btn-xl">{{ i18n "404.button" }}</a>
-          </div>
-        </div>
+{{ define "main" }}
+{{ "<!-- 404 -->" | safeHTML }}
+<header>
+  <div class="container">
+    <div class="404">
+      <div class="intro-text">
+        <div class="intro-heading">{{ i18n "404.title" }}</div>
+        <div class="intro-lead-in">{{ i18n "404.subtitle" }}</div>
+        <div class="intro-lead-in">{{ i18n "404.description" }}</div>
+        <a href="{{ .Site.BaseURL | relLangURL }}" class="page-scroll btn btn-xl">{{ i18n "404.button" }}</a>
       </div>
-    </header>
-    {{ if .Site.Params.footer.enable }}
-      {{ partial "footer.html" . }}
-    {{ end }}
-    {{ partial "js.html" . }}
-  </body>
-</html>
+    </div>
+  </div>
+</header>
+{{ end }}

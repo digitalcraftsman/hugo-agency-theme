@@ -1,84 +1,68 @@
-<!DOCTYPE html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+{{ define "main" -}}
+  {{ with index $.Site.Data.index (string $.Site.Language) }}
+    {{ $.Scratch.Set "data" . }}
 
-  {{ partial "head.html" . }}
-
-  <body id="page-top" class="index" home=true>
-    {{ partial "nav.html" . }}
-
-    {{ with index $.Site.Data.index (string $.Site.Language) }}
-      {{ $.Scratch.Set "data" . }}
-
-      {{ with and (not .hero.disable) (.hero) }}
-        {{ partial "hero.html" $ }}
-      {{ end }}
-
-      {{ with and (not .services.disable) (.services) }}
-        {{ partial "services.html" $ }}
-      {{ end }}
-
-      {{ with and (not .portfolio.disable) (.portfolio) }}
-        {{ partial "portfolio.html" $ }}
-        {{ partial "modals.html" $ }}
-      {{ end }}
-
-      {{ with and (not .timeline.disable) (.timeline) }}
-        {{ partial "timeline.html" $ }}
-      {{ end }}
-
-      {{ with and (not .team.disable) (.team) }}
-        {{ partial "team.html" $ }}
-      {{ end }}
-
-      {{ with and (not .clients.disable) (.clients) }}
-        {{ partial "clients.html" $ }}
-      {{ end }}
-
-      {{ with and (not .contact.disable) (.contact) }}
-        {{ partial "contact.html" $ }}
-      {{ end }}
-
+    {{ with and (not .hero.disable) (.hero) }}
+      {{ partial "hero.html" $ }}
     {{ end }}
 
-    {{ with and (not (index $.Site.Data.index (string $.Site.Language))) ($.Site.Data.index) }}
-      {{ $.Scratch.Set "data" . }}
-
-      {{ with and (not .hero.disable) (.hero) }}
-        {{ partial "hero.html" $ }}
-      {{ end }}
-
-      {{ with and (not .services.disable) (.services) }}
-        {{ partial "services.html" $ }}
-      {{ end }}
-
-      {{ with and (not .portfolio.disable) (.portfolio) }}
-        {{ partial "portfolio.html" $ }}
-        {{ partial "modals.html" $ }}
-      {{ end }}
-
-      {{ with and (not .timeline.disable) (.timeline) }}
-        {{ partial "timeline.html" $ }}
-      {{ end }}
-
-      {{ with and (not .team.disable) (.team) }}
-        {{ partial "team.html" $ }}
-      {{ end }}
-
-      {{ with and (not .clients.disable) (.clients) }}
-        {{ partial "clients.html" $ }}
-      {{ end }}
-
-      {{ with and (not .contact.disable) (.contact) }}
-        {{ partial "contact.html" $ }}
-      {{ end }}
-
+    {{ with and (not .services.disable) (.services) }}
+      {{ partial "services.html" $ }}
     {{ end }}
 
-    {{ if .Site.Params.footer.enable }}
-      {{ partial "footer.html" . }}
+    {{ with and (not .portfolio.disable) (.portfolio) }}
+      {{ partial "portfolio.html" $ }}
+      {{ partial "modals.html" $ }}
     {{ end }}
 
-    {{ partial "js.html" . }}
+    {{ with and (not .timeline.disable) (.timeline) }}
+      {{ partial "timeline.html" $ }}
+    {{ end }}
 
-  </body>
-</html>
+    {{ with and (not .team.disable) (.team) }}
+      {{ partial "team.html" $ }}
+    {{ end }}
+
+    {{ with and (not .clients.disable) (.clients) }}
+      {{ partial "clients.html" $ }}
+    {{ end }}
+
+    {{ with and (not .contact.disable) (.contact) }}
+      {{ partial "contact.html" $ }}
+    {{ end }}
+
+  {{ end }}
+
+  {{ with and (not (index $.Site.Data.index (string $.Site.Language))) ($.Site.Data.index) }}
+    {{ $.Scratch.Set "data" . }}
+
+    {{ with and (not .hero.disable) (.hero) }}
+      {{ partial "hero.html" $ }}
+    {{ end }}
+
+    {{ with and (not .services.disable) (.services) }}
+      {{ partial "services.html" $ }}
+    {{ end }}
+
+    {{ with and (not .portfolio.disable) (.portfolio) }}
+      {{ partial "portfolio.html" $ }}
+      {{ partial "modals.html" $ }}
+    {{ end }}
+
+    {{ with and (not .timeline.disable) (.timeline) }}
+      {{ partial "timeline.html" $ }}
+    {{ end }}
+
+    {{ with and (not .team.disable) (.team) }}
+      {{ partial "team.html" $ }}
+    {{ end }}
+
+    {{ with and (not .clients.disable) (.clients) }}
+      {{ partial "clients.html" $ }}
+    {{ end }}
+
+    {{ with and (not .contact.disable) (.contact) }}
+      {{ partial "contact.html" $ }}
+    {{ end }}
+  {{ end }}
+  {{ end }}

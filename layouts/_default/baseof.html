@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-US" }}">
+  {{ partialCached "head.html" . }}
+
+ <!-- TODO:
+
+    - class=index on home and 404 page
+    - home=true on homepage
+
+    TODO: $home causes ZgotmplZ
+  -->
+  {{ $class := cond (in .Kind (slice "404" "home")) "index" "single"}}
+  {{ $home := cond .IsHome "home=true" "" }}
+  <body id="page-top" class="index" {{ $home  }}>
+    {{ partialCached "nav.html" . }}
+
+    {{ block "main" . }}{{ end }}
+
+    {{ if .Site.Params.footer.enable }}
+      {{ partialCached "footer.html" . }}
+    {{ end }}
+
+    {{ partialCached "js.html" . }}
+  </body>
+</html>

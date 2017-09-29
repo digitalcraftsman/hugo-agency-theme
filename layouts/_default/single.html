@@ -1,27 +1,14 @@
-<!DOCTYPE html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+{{ define "main" }}
+{{ partial "single.html" . }}
 
-  {{ partial "head.html" . }}
+{{ $.Scratch.Set "contact" .Params.elements.contact }}
+{{ $.Scratch.Set "footer" .Params.elements.footer }}
 
-  <body id="page-top" class="single">
-    {{ partial "nav.html" . }}
-    {{ partial "single.html" . }}
+{{ range sort (where .Site.Pages "Section" "home") }}
 
-    {{ $.Scratch.Set "contact" .Params.elements.contact }}
-    {{ $.Scratch.Set "footer" .Params.elements.footer }}
+  {{ if and (in .RelPermalink "/home/contact/") ($.Scratch.Get "contact") }}
+    {{ partial "contact.html" . }}
+  {{ end }}
 
-    {{ range sort (where .Site.Pages "Section" "home") }}
-
-      {{ if and (in .RelPermalink "/home/contact/") ($.Scratch.Get "contact") }}
-        {{ partial "contact.html" . }}
-      {{ end }}
-
-    {{ end }}
-
-    {{ if and .Site.Params.footer.enable ($.Scratch.Get "footer") }}
-      {{ partial "footer.html" . }}
-    {{ end }}
-
-    {{ partial "js.html" . }}
-  </body>
-</html>
+{{ end }}
+{{ end }}
