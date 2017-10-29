@@ -845,6 +845,14 @@ section#contact .text-success {
     color: #ffffff;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
 footer {
     padding: 25px 0;
     text-align: center;
