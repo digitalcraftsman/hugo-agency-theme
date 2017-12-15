@@ -302,14 +302,17 @@ She worked at Pied Piper for years until they went belly up."""
     [[params.footer.social]]
       icon = "fa-twitter"
       link = "#"
+      title = "Twitter"
 
     [[params.footer.social]]
       icon = "fa-facebook"
       link = "#"
+      title = "Facebook"
 
     [[params.footer.social]]
       icon = "fa-linkedin"
       link = "#"
+      title = "LinkedIn"
 
     [[params.footer.quicklinks]]
       text = "Privacy Policy"
