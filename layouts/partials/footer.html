@@ -9,7 +9,7 @@
         <ul class="list-inline social-buttons">
 
           {{ range .Site.Params.footer.social }}
-            <li><a href="{{ .link }}"><i class="fa {{ .icon }}"></i></a></li>
+            <li><a href="{{ .link }}" title="{{ .title }}"><i class="fa {{ .icon }}"></i></a></li>
           {{ end }}
 
         </ul>
