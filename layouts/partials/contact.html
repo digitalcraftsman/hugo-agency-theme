@@ -1,14 +1,16 @@
+{{ $contact := .Site.Params.contact }}
 {{ "<!-- Contact Section -->" | safeHTML }}
+
 <section id="contact">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
 
-        {{ with .Site.Params.contact.title }}
+        {{ with $contact.title }}
         <h2 class="section-heading">{{ . | markdownify }}</h2>
         {{ end }}
 
-        {{ with .Site.Params.contact.subtitle }}
+        {{ with $contact.subtitle }}
         <h3 class="section-subheading text-muted">{{ . | markdownify }}</h3>
         {{ end }}
 
@@ -16,31 +18,35 @@
     </div>
     <div class="row">
       <div class="col-lg-12">
-        {{ if not .Site.Params.contact.postURL }}
-        <form  action="//formspree.io/{{ with (or .Site.Params.contact.email .Site.Params.email)}}{{.}}{{ end }}" method="POST" name="sentMessage" id="contactForm">
-        {{ else }}
-        <form  action="{{ .Site.Params.contact.postURL }}" method="POST" name="sentMessage" id="contactForm">
-        {{ end }}
+        <form
+          method="POST"
+          name="sentMessage"
+          id="contactForm
+          {{- if $contact.netlify -}}
+            " netlify
+          {{- else -}}
+            " action="{{- $contact.postURL | default (printf "//formspree.io/%s" (or $contact.email .Site.Params.email)) -}}"
+          {{- end -}}>
 
           <fieldset>
             <div class="row">
               <div class="col-md-6">
 
-                {{ with .Site.Params.contact.form.name }}
+                {{ with $contact.form.name }}
                 <div class="form-group">
                   <input class="form-control" id="name" required="required" type="text" name="name" placeholder="{{ with .text }}{{ .  | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}">
                   <p class="help-block text-danger"></p>
                 </div>
                 {{ end }}
 
-                {{ with .Site.Params.contact.form.email }}
+                {{ with $contact.form.email }}
                 <div class="form-group">
                   <input class="form-control" id="email" required="required" type="email" name="email" placeholder="{{ with .text }}{{ . | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}">
                   <p class="help-block text-danger"></p>
                 </div>
                 {{ end }}
 
-                {{ with .Site.Params.contact.form.phone }}
+                {{ with $contact.form.phone }}
                 <div class="form-group">
                   <input class="form-control" id="phone" required="required" type="number" name="phone" placeholder="{{ with .text }}{{ . | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}"></textarea>
                   <p class="help-block text-danger"></p>
@@ -49,7 +55,7 @@
               </div>
 
               <div class="col-md-6">
-              {{ with .Site.Params.contact.form.message }}
+              {{ with $contact.form.message }}
                 <div class="form-group">
                   <textarea class="form-control" id="message" required="required" name="message" placeholder="{{ with .text }}{{ . | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}"></textarea>
                   <p class="help-block text-danger"></p>
@@ -60,23 +66,23 @@
               <div class="clearfix"></div>
               <div class="col-lg-12 text-center">
                 <div class="text-success" id="success" style="display:none;">
-                  {{ with .Site.Params.contact.thanks }}
+                  {{ with $contact.thanks }}
                     {{ . | markdownify }}
                   {{ else }}
                     Thank you for contacting us.
                   {{ end }}
                 </div>
                 <div class="text-danger" id="error" style="display:none;">
-                  {{ with .Site.Params.contact.error }}
+                  {{ with $contact.error }}
                     {{ . | markdownify }}
                   {{ else }}
-                    Message could not be send. Please contact us at {{ (or .Site.Params.contact.email .Site.Params.email) }} instead.
+                    Message could not be send. Please contact us at {{ (or $contact.email .Site.Params.email) }} instead.
                   {{ end }}
                 </div><br />
-                <button type="submit" value="Submit" class="btn btn-xl">{{ with .Site.Params.contact.buttonText }}{{ . }}{{ end }}</button>
+                <button type="submit" value="Submit" class="btn btn-xl">{{ with $contact.buttonText }}{{ . }}{{ end }}</button>
               </div>
             </div>
-            {{ range .Site.Params.contact.form.hidden }}
+            {{ range $contact.form.hidden }}
               {{ if eq .name "site" }}
                 <input type="hidden" name="{{ .name }}" value="{{ $.Permalink }}"/>
               {{ else if eq .name "page" }}
