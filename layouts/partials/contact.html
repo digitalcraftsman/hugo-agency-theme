@@ -72,6 +72,9 @@
                     Thank you for contacting us.
                   {{ end }}
                 </div>
+                <div class="captcha-error text-danger" id="captcha-error">
+                  Message is not sendable due to captcha not loadable. Please contact us at {{ (or $contact.email .Site.Params.email) -}}.
+                </div>
                 <div class="text-danger" id="error" style="display:none;">
                   {{ with $contact.error }}
                     {{ . | markdownify }}
@@ -79,7 +82,26 @@
                     Message could not be send. Please contact us at {{ (or $contact.email .Site.Params.email) }} instead.
                   {{ end }}
                 </div><br />
-                <button type="submit" value="Submit" class="btn btn-xl">{{ with $contact.buttonText }}{{ . }}{{ end }}</button>
+                {{ with $contact.captcha }}
+                  <div class="g-recaptcha-container">
+                    <span class="g-recaptcha-filler"></span>
+                    <button
+                      type="submit"
+                      value="Submit"
+                      class="g-recaptcha btn btn-xl"
+                      data-sitekey="{{ .sitekey }}"
+                      data-size="invisible"
+                      data-badge="inline"
+                      data-callback="onContactCaptcha">
+                      {{ print $contact.buttonText }}
+                    </button>
+                    <span class="filler"></span>
+                  </div>
+                {{ else }}
+                  <button type="submit" value="Submit" class="btn btn-xl">
+                    {{ print $contact.buttonText }}
+                  </button>
+                {{ end }}
               </div>
             </div>
             {{ range $contact.form.hidden }}
