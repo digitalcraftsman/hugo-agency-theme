@@ -19,6 +19,7 @@ googleAnalytics = ""
   # information about you and your website.
   name = "Your name"
   description = "Your description"
+  # email = "your@email.com"
 
   # Link custom assets relative to /static
   custom_css = []
@@ -243,6 +244,7 @@ She worked at Pied Piper for years until they went belly up."""
     title = "Contact us"
     subtitle  = "Lorem ipsum dolor sit amet consectetur."
     buttonText = "Send message"
+    # netlify = true
 
     # Since this template is static, the contact form uses www.formspree.io as a
     # proxy. The form makes a POST request to their servers to send the actual
@@ -267,6 +269,9 @@ She worked at Pied Piper for years until they went belly up."""
     # Success and error message overwrite for async contact form
     #thanks = "Thank you for awesomely contacting us."
     #error = "Message could not be send. Please contact us at mail@example.com instead."
+
+    [params.contact.captcha]
+      # sitekey = ""
 
     # 'warning' defines error messages for invalid inputs
     [params.contact.form.name]
