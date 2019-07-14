@@ -53,7 +53,7 @@ $('form[id=contactForm]').submit(function(){
     $('form[id=contactForm] #error').hide();
     if (jqXHR.status == 200) {
       $('form[id=contactForm] #success').show();
-    }}, 'json').fail(function(){
+    }}).fail(function(){
       $('form[id=contactForm] #success').hide();
       $('form[id=contactForm] #error').hide();
       $('form[id=contactForm] #error').show();
