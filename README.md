@@ -1,10 +1,17 @@
-# Agency Theme
+# Agency Theme 
+
+#### NOTE: This theme has been archived
+
+The development of this theme has been discontinued on 07.08.2019. The repository is archived in its current state. In this state it will not be possible to create new pull requests or issues. However, feel free to fork this theme.
+
+[Syna](https://syna.okkur.org) has been developed by [Michael Grosser](https://github.com/stp-ip) as a flexible evolution of the Agency theme. Please consider to use it for new projects instead.
+
+Thanks to all contributors who have helped to improve this theme.
+
+---
 
 Agency Theme is a one page portfolio for companies and freelancers based on the [original Bootstrap theme](//github.com/IronSummitMedia/startbootstrap-agency) by [David Miller](//github.com/davidtmiller). This Hugo theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, a timeline, and a contact form.
 
-#### NOTE: This theme is in maintenance mode!
-
-This means no new features will be added. [Syna](https://syna.okkur.org) has been created as a more flexible iteration of this theme. Consider to use it for new projects instead.
 
 
 ![Hugo Agency Theme screenshot](https://raw.githubusercontent.com/digitalcraftsman/hugo-agency-theme/master/images/screenshot.png)
